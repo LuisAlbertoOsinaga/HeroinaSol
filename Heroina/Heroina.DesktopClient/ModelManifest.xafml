@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Properties\ApplicationData\Empresas.lsml" Checksum="E06E8A681FC87C744A8EF040AD53B897B16527149F0F31B7EA486466C82E9CAF" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Properties\ApplicationData\FacturaTipoDetalles.lsml" Checksum="72C3F2C2484D931BA40D44965E9125CF6A312F365F916E7C021906879C08C5B3" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Properties\ApplicationData\FacturaTipos.lsml" Checksum="7C5661C90660B7AB9E186061D61C083BE2B87226DA98E351E44117D2898109ED" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Properties\ApplicationData\SoftClientes.lsml" Checksum="CE47B3BD10A95D2589E6E4F57C6BACFC6D4A211E86183D4EBBB37ED82E12ECA4" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Properties\Client.lsml" Checksum="5676E8F37A547DAE4DD6CD41DCD8FB28F4822F8C9608A004F4F9F90B174ECAF1" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Properties\Proxies.lsml" Checksum="75A63C63CCFA98284105BEA20B89E50CB1B3496FC5D6D6A57AC7A16EEE3DA7FC" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridAutoimpresores.lsml" Checksum="631A9A85CBE2C9F0160C60F5E72512285FC64235B1732417655ACE857AB9BDB0" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridClientes.lsml" Checksum="395B526E84BE48725905A10207E73539BC01088BC948BDEF80514189A9FB0C13" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridConfiguracion.lsml" Checksum="DC595723BFFD9FFD1F13260BF13D3DACC97A60C75433C05B36640881BF00F9B8" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridDosificaciones.lsml" Checksum="1B7D3DA70F1B19FDD2AF4F33C648068AE4A902A482AD1F2544629DB529049DE5" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridEmpresas.lsml" Checksum="EFD383D213E4B0C8163FF0792B9531B4EB8965F00C092E9EBF8EA5B70ED5303A" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridFacturaTipoDetalles.lsml" Checksum="FD1235D51330CEC40EEAFCE81244777F0662EDAA7DA59A3C93F35986B7BE0DA1" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridFacturaTipos.lsml" Checksum="87D4C5A4C0C7473934BD829DDFE4A5EEA0F49ADE85D0A49B768E12EACE5148D5" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridSoftClientes.lsml" Checksum="2DC3AD9E3D51364819B5BDAFD206A6DD5724CC14AD2F396ED1FEACD8B5901C9D" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\GridSucursales.lsml" Checksum="617A588D9C72A576A1FB9D65602DE27766B87FEACC9052EDD2E8BFB562A576D0" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\ListFacturas.lsml" Checksum="127CB54F9882F4FFAB7B2F8897DB87D53EF95253C838F66CC0EE036AC1EDDA23" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\ScreenFacturacion.lsml" Checksum="60A8C7B65E89A6A874C991F886BBD4F6F82505F3493EC0A29F8BE974F9454691" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Screens\ScreenFechaHoy.lsml" Checksum="4A057E4AF01568F7E58616397945DE45FFA1ACAAB5883B57BABF5EF45E35CFD4" />
+  </Documents>
+</ModelDocumentManifest>

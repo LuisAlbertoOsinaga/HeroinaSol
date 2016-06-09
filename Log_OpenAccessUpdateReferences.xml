@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_ConvertModelWizard_Files\UpgradeReferences.xslt"?>
+<UpgradeLog>
+  <Events>
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Heroina.Server.csproj" Message="Assembly References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Heroina.Server.csproj" Message="Project References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Heroina.Server.csproj" Message="Import Directives" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\default.aspx" Message="Register Directives" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\default.aspx" Message="Assembly Directives" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\default.aspx" Message="default.aspx" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\packages.config" Message="Assembly References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\packages.config" Message="Http Handlers" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\packages.config" Message="Handlers (IIS7+)" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\packages.config" Message="Config Sections" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\packages.config" Message="Render Extensions" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\packages.config" Message="packages.config" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.config" Message="Assembly References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.config" Message="Http Handlers" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.config" Message="Handlers (IIS7+)" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.config" Message="Config Sections" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.config" Message="Render Extensions" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.config" Message="Web.config" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Debug.config" Message="Assembly References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Debug.config" Message="Http Handlers" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Debug.config" Message="Handlers (IIS7+)" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Debug.config" Message="Config Sections" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Debug.config" Message="Render Extensions" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Debug.config" Message="Web.Debug.config" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Release.config" Message="Assembly References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Release.config" Message="Http Handlers" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Release.config" Message="Handlers (IIS7+)" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Release.config" Message="Config Sections" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Release.config" Message="Render Extensions" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Web.Release.config" Message="Web.Release.config" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Heroina.Server.csproj" Message="Heroina.Server" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Heroina.DesktopClient.csproj" Message="Assembly References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Heroina.DesktopClient.csproj" Message="Project References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Heroina.DesktopClient.csproj" Message="Import Directives" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.DesktopClient\Heroina.DesktopClient.csproj" Message="Heroina.DesktopClient" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\SoftCliente\SoftCliente.csproj" Message="Assembly References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\SoftCliente\SoftCliente.csproj" Message="Project References" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\SoftCliente\SoftCliente.csproj" Message="Import Directives" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\SoftCliente\SoftCliente.csproj" Message="SoftCliente" />
+    <Event EventType="Success" Action="Analyze" SourceItem="C:\Work\Heroina\HeroinaSol\HeroinaSol.sln" Message="HeroinaSol" />
+  </Events>
+</UpgradeLog>

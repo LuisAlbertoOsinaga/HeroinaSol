@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <QueryOperation
+      Name="FacturasXEmpresaEntreEstadosEntreFechasEntreTipos"
+      ReturnType="Factura*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <TernaryExpression
+                    NodeType="Between">
+                    <TernaryExpression.First>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Estado" />
+                      </ChainExpression>
+                    </TernaryExpression.First>
+                    <TernaryExpression.Second>
+                      <ParameterExpression
+                        Parameter="EstadoInicial" />
+                    </TernaryExpression.Second>
+                    <TernaryExpression.Third>
+                      <ParameterExpression
+                        Parameter="EstadoFinal" />
+                    </TernaryExpression.Third>
+                  </TernaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <TernaryExpression
+                    NodeType="Between">
+                    <TernaryExpression.First>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="FechaEmision" />
+                      </ChainExpression>
+                    </TernaryExpression.First>
+                    <TernaryExpression.Second>
+                      <ParameterExpression
+                        Parameter="FechaInicial" />
+                    </TernaryExpression.Second>
+                    <TernaryExpression.Third>
+                      <ParameterExpression
+                        Parameter="FechaFinal" />
+                    </TernaryExpression.Third>
+                  </TernaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <TernaryExpression
+                NodeType="Between">
+                <TernaryExpression.First>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="FacturaTipo" />
+                    <MemberExpression
+                      Member="Codigo" />
+                  </ChainExpression>
+                </TernaryExpression.First>
+                <TernaryExpression.Second>
+                  <ParameterExpression
+                    Parameter="TipoFacturaInicial" />
+                </TernaryExpression.Second>
+                <TernaryExpression.Third>
+                  <ParameterExpression
+                    Parameter="TipoFacturaFinal" />
+                </TernaryExpression.Third>
+              </TernaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="FacturasXEmpresa" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="EstadoInicial"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="EstadoFinal"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="FechaInicial"
+        ParameterType=":DateTime?" />
+      <QueryOperationParameter
+        Name="FechaFinal"
+        ParameterType=":DateTime?" />
+      <QueryOperationParameter
+        Name="TipoFacturaInicial"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="TipoFacturaFinal"
+        ParameterType=":String?" />
+    </QueryOperation>
+  </EntityContainer>
+</ServiceApplication>

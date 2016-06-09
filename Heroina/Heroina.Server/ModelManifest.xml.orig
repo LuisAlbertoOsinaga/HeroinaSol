@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\AutoImpresores.lsml" Checksum="5B4C4BEA5F1668CD58B88DB9A17A903C18D9B8DACDB9A9FAAE1A4F9C30E3B5FB" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\AutoImpresoresXSucursal.lsml" Checksum="0BDBA016D89FA38F81C3B7297B37E2E63FC5CD2DA750CA484D3C69950E551792" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedAutoImpresores.lsml" Checksum="D9842324DB05479FD257E309FEBDD15FCA5214070CA394E868E5928F5939D9F3" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\Clientes.lsml" Checksum="27E461F4A1182535D10C5AD1BD4BFA094A89478ECA21081B82A077C5022ADF66" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\ClientesXEmpresa.lsml" Checksum="67900D31A2CDB97E24F7B1CE26F5D866251B49939DA22D4A0DFF5B6D6E6AB125" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedClientes.lsml" Checksum="AA79A84AFCA191EAE0B7B02D375CB3108CB4CE51C2D55F749063B67C610A1E9C" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\Configuracions.lsml" Checksum="0DF8FB66C9509261E9888E6286CDF3096C21ED8906288500B3BAB127395E04D8" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\Dosificacions.lsml" Checksum="4BA810073DD9E4DA03ABC8DF498889E5413B7584CD47DB4495548E2D4B490A8F" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\DosificacionesXAutoimpresor.lsml" Checksum="6DCB0F31FE8D99C51082D3E99A4D993CABA5369FADD4A1DB7BEFF0BE000438B7" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedDosificacions.lsml" Checksum="06EEF7EF14D0EBCA060B26394840342941A0D9A7C8ABEA25D4F7C1641AD73553" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\EmpresaLogos.lsml" Checksum="7C2FAA815F5F86AECAB227E3059ED2B8882D6D41398902E4C35F1418FB485292" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedEmpresaLogos.lsml" Checksum="BDDFDADD84D98B17C64C34F0074F02CC3DBDA5C883D6FFE17160E74F9548F985" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\Empresas.lsml" Checksum="0A6F4A4E59C25B49EF9737295E5C99A8241C7A5B6DA30C75E40C80E676178624" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\EmpresasXSofCliente.lsml" Checksum="5898F3DDDF539896DF7E7C9DBAD559CE0E286375FB5FFA1DF328213392265672" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedEmpresas.lsml" Checksum="8BBDF61A5A4A19EC6B97832DE4745744CB24A70F163094F453FCEBE47695FBE7" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\Factura_QRs.lsml" Checksum="E557A579CBF6752FACCA054794E5456E56102A9DAEB60CFE2DFE2438703249E2" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedFactura_QRs.lsml" Checksum="6D35531C962EF65E58A5632D87430255EF0CA3EBA1DEC8C019D26F6B36374FE1" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\FacturaDetalles.lsml" Checksum="9A7CB80B82374DEC8C8CB552F51E06B975BE5695B13FD2DFB302CF8B80C87F2C" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\FacturaDetallesXFactura.lsml" Checksum="4B1D6E8D603700E4BE0D9B61EAE1A7F800001A1D0C26EB202C80E680F1FFABFB" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedFacturaDetalles.lsml" Checksum="4277EA45A8D12483A726937E35881513B92F29E1007312F413DEEE80928941C6" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\FacturaHospedajes.lsml" Checksum="AA647F2E73DAC96D3D006F027AAF0691E4ECBB7E9330B7D93C8651784E49BAB5" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedFacturaHospedajes.lsml" Checksum="3946E018EF4F382C421C7F0E4EC58B63B1D3B0C8C0940B93E60D8ACDDFD21EE0" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\Facturas.lsml" Checksum="7758E5CB0523427C8912B095FBB5BBA0EBFDA69DB49D99EC172DAA569813241F" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\FacturasXAutoimpresor.lsml" Checksum="AD0B8A435336034E9D178D1678E2FDFEA81BB6BCF3021860A1F9FEAD056368D2" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\FacturasXDosificacion.lsml" Checksum="3BF731ED96135D7A0F62099DB6F76C96263E6A4FEBA631F751F2ACF0B31796EF" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedFacturas.lsml" Checksum="9B636A83055577F40AC57C12D7E9DA793C3A20B170218D73F2109302AD177486" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\FacturaTipoDetalles.lsml" Checksum="CF7BCA1FB57538ADEA148E36E958B4747154500C94C344E71F90E7D788AB241F" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedFacturaTipoDetalles.lsml" Checksum="F80DB150CF5704C7366D7E0BDE35AC297042CAAD81CCEE8E0A682A5AC3E586E2" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\FacturaTipos.lsml" Checksum="99C7EE09279864D69CC381665A49E5679D30CF2F617F9C717DE1B4C064BE697D" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\FacturaTiposXSoftCliente.lsml" Checksum="8193AB524DDE46F4504C5216F3D674CCA33B5AA3308BC33E27E4166EE6393987" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedFacturaTipos.lsml" Checksum="587E9A5687B76E17CC6F63EE47BE541F45A0ABA697276254DF6189DA045E4012" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\Secuencias.lsml" Checksum="D8BD3C17F5AC15CAF6DE8C4C29C633DCC100EDE940DDC977FF970377CDA37AD3" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedSecuencias.lsml" Checksum="D814DD110C6D5F8195D1ECAFA588164EF570353DBBF4D23F6502E00FAC25EF07" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SoftClientes.lsml" Checksum="12DCBCE7C2E1B7800846AFB9D0523FDCE0789C664E4AE9B389FC2F8551BA2450" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SoftClienteX.lsml" Checksum="5F8E723880D97A96227F2FB8D3F8E83969AF1E3F5CA06CA052D2FCD1213917A3" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedSoftClientes.lsml" Checksum="0F87632D898AEB1D86F447C1C2E81E53E24DCD32599B0281A1491E8ADF46018C" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\Sucursals.lsml" Checksum="66FFED787BD0E26ED09A3C000D04FE14503BC344BBA56F9867FF77B490E94D62" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SortedSucursales.lsml" Checksum="5481837A9E2BD560E1D8A65E64A90535F6A69AA0B28F63BE757D9D51BC902690" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\DataSources\ApplicationData\SucursalesXEmpresa.lsml" Checksum="ED8CA1E7DED5B2F398E48C30C32605C4FBA4954F14B35916DCC079DA42EB2709" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Properties\DataSources\ApplicationData.lsml" Checksum="4269B7A1C607D3AEA1D34BA816EE24BE223A014F83A97F863157835AA09C6154" />
+    <Document FullPath="C:\Work\Heroina\HeroinaSol\Heroina\Heroina.Server\Properties\Service.lsml" Checksum="679C78F29C5AF23E9956A773B0E46DF90F7B86CADA0B79571E5896A1C79F5B70" />
+  </Documents>
+</ModelDocumentManifest>

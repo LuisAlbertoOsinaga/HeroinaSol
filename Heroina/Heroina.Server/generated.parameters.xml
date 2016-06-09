@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Heroina_IisWebApplication" description="IIS Web Application content location" defaultValue="Default Web Site/CashFlow" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\Work\\Heroina\\HeroinaSol\\Heroina\\bin\\Release\\app\.publish\\$" />
+  </parameter>
+</parameters>

@@ -1,0 +1,1084 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Empresa">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+          <Hidden />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="EmpresaId"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Nombre"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NIT"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RazonSocial"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Razón Social" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Propietario"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActividadEconomica"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Domicilio"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Municipio"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Departamento"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Calle"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Zona"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Ubicacion"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <DisplayName
+            Value="Ubicación" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Ciudad"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Pais"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Telefonos"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PaginaWeb"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Correo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="SoftCliente"
+        Association="Empresa_SoftCliente"
+        FromEnd="Empresa"
+        ToEnd="SoftCliente">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <EntityProperty
+        Name="CreadoPor"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreadoEn"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActualizadoPor"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActualizadoEn"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <Hidden />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RegId"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <Hidden />
+          <IncludeInUniqueIndex />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TimeStamp"
+        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Sucursals"
+        Association="Sucursal_Empresa"
+        FromEnd="Empresa"
+        ToEnd="Sucursal" />
+      <NavigationProperty
+        Name="Clientes"
+        Association="Cliente_Empresa"
+        FromEnd="Empresa"
+        ToEnd="Cliente" />
+      <NavigationProperty
+        Name="Turnos"
+        Association="Turno_Empresa"
+        FromEnd="Empresa"
+        ToEnd="Turno" />
+      <NavigationProperty
+        Name="FacturaTipoDetalles"
+        Association="FacturaTipoDetalle_Empresa"
+        FromEnd="Empresa"
+        ToEnd="FacturaTipoDetalle" />
+      <EntityProperty
+        Name="Resumen"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Computed />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="FacturaTipos"
+        Association="FacturaTipo_Empresa"
+        FromEnd="Empresa"
+        ToEnd="FacturaTipo" />
+      <NavigationProperty
+        Name="Procesos"
+        Association="Proceso_Empresa"
+        FromEnd="Empresa"
+        ToEnd="Proceso" />
+      <NavigationProperty
+        Name="MedioPagos"
+        Association="MedioPago_Empresa"
+        FromEnd="Empresa"
+        ToEnd="MedioPago" />
+      <NavigationProperty
+        Name="FormaPagos"
+        Association="FormaPago_Empresa"
+        FromEnd="Empresa"
+        ToEnd="FormaPago" />
+      <NavigationProperty
+        Name="ActividadesEconomicas"
+        Association="ActividadEconomica_Empresa"
+        FromEnd="Empresa"
+        ToEnd="ActividadEconomica" />
+      <NavigationProperty
+        Name="CausaAnulaciones"
+        Association="CausaAnulacion_Empresa"
+        FromEnd="Empresa"
+        ToEnd="CausaAnulacion" />
+      <NavigationProperty
+        Name="RolEmails"
+        Association="RolEmail_Empresa"
+        FromEnd="Empresa"
+        ToEnd="RolEmail" />
+      <NavigationProperty
+        Name="SendEMail"
+        Association="SendEMail_Empresa"
+        FromEnd="Empresa"
+        ToEnd="SendEMail" />
+      <NavigationProperty
+        Name="Parametros"
+        Association="Parametro_Empresa"
+        FromEnd="Empresa"
+        ToEnd="Parametro" />
+      <NavigationProperty
+        Name="ResumenCajas"
+        Association="ResumenCaja_Empresa"
+        FromEnd="Empresa"
+        ToEnd="ResumenCaja" />
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <UseForConcurrency />
+          <Generated />
+          <Hidden />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Empresas"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Empresa" />
+    <QueryOperation
+      Name="Empresas_Single"
+      ReturnType="Empresa">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Empresas" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Empresas_SingleOrDefault"
+      ReturnType="Empresa">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Empresas" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="Sucursal_Empresas"
+      Association="Sucursal_Empresa">
+      <AssociationSetEnd
+        Name="Sucursal"
+        EntitySet="Sucursals" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Cliente_Empresas"
+      Association="Cliente_Empresa">
+      <AssociationSetEnd
+        Name="Cliente"
+        EntitySet="Clientes" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Turno_Empresas"
+      Association="Turno_Empresa">
+      <AssociationSetEnd
+        Name="Turno"
+        EntitySet="Turnos" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FacturaTipoDetalle_Empresas"
+      Association="FacturaTipoDetalle_Empresa">
+      <AssociationSetEnd
+        Name="FacturaTipoDetalle"
+        EntitySet="FacturaTipoDetalles" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FacturaTipo_Empresas"
+      Association="FacturaTipo_Empresa">
+      <AssociationSetEnd
+        Name="FacturaTipo"
+        EntitySet="FacturaTipos" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Proceso_Empresas"
+      Association="Proceso_Empresa">
+      <AssociationSetEnd
+        Name="Proceso"
+        EntitySet="Procesos" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="MedioPago_Empresas"
+      Association="MedioPago_Empresa">
+      <AssociationSetEnd
+        Name="MedioPago"
+        EntitySet="MedioPagos" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FormaPago_Empresas"
+      Association="FormaPago_Empresa">
+      <AssociationSetEnd
+        Name="FormaPago"
+        EntitySet="FormaPagos" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="ActividadEconomica_Empresas"
+      Association="ActividadEconomica_Empresa">
+      <AssociationSetEnd
+        Name="ActividadEconomica"
+        EntitySet="ActividadEconomicas" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="CausaAnulacion_Empresas"
+      Association="CausaAnulacion_Empresa">
+      <AssociationSetEnd
+        Name="CausaAnulacion"
+        EntitySet="CausaAnulaciones" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="RolEmail_Empresas"
+      Association="RolEmail_Empresa">
+      <AssociationSetEnd
+        Name="RolEmail"
+        EntitySet="RolEmails" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="SendEMail_Empresas"
+      Association="SendEMail_Empresa">
+      <AssociationSetEnd
+        Name="SendEMail"
+        EntitySet="SendEMails" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Parametro_Empresas"
+      Association="Parametro_Empresa">
+      <AssociationSetEnd
+        Name="Parametro"
+        EntitySet="Parametros" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+    <AssociationSet
+      Name="ResumenCaja_Empresas"
+      Association="ResumenCaja_Empresa">
+      <AssociationSetEnd
+        Name="ResumenCaja"
+        EntitySet="ResumenCajas" />
+      <AssociationSetEnd
+        Name="Empresa"
+        EntitySet="Empresas" />
+    </AssociationSet>
+  </EntityContainer>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Empresas">
+      <EntitySetMapping.Attributes>
+        <SsdlForeignKeyProperty
+          Name="Empresa_SoftCliente"
+          Nullable="False"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="Sucursal_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Sucursal_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Sucursal_Empresas]/Members[Sucursal]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Sucursal_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Sucursal_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Cliente_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Cliente_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Cliente_Empresas]/Members[Cliente]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Cliente_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Cliente_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Turno_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Turno_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Turno_Empresas]/Members[Turno]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Turno_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Turno_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FacturaTipoDetalle_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FacturaTipoDetalle_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[FacturaTipoDetalle_Empresas]/Members[FacturaTipoDetalle]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="FacturaTipoDetalle_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[FacturaTipoDetalle_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FacturaTipo_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FacturaTipo_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[FacturaTipo_Empresas]/Members[FacturaTipo]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="FacturaTipo_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[FacturaTipo_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Proceso_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Proceso_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Proceso_Empresas]/Members[Proceso]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Proceso_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Proceso_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="MedioPago_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="MedioPago_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[MedioPago_Empresas]/Members[MedioPago]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="MedioPago_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[MedioPago_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FormaPago_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FormaPago_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[FormaPago_Empresas]/Members[FormaPago]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="FormaPago_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[FormaPago_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="ActividadEconomica_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="ActividadEconomica_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[ActividadEconomica_Empresas]/Members[ActividadEconomica]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ActividadEconomica_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[ActividadEconomica_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="CausaAnulacion_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="CausaAnulacion_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[CausaAnulacion_Empresas]/Members[CausaAnulacion]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CausaAnulacion_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[CausaAnulacion_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="RolEmail_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="RolEmail_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[RolEmail_Empresas]/Members[RolEmail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="RolEmail_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[RolEmail_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="SendEMail_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="SendMail_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[SendEMail_Empresas]/Members[SendEMail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="SendMail_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[SendEMail_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Parametro_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Parametro_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Parametro_Empresas]/Members[Parametro]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Parametro_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Parametro_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="ResumenCaja_Empresas">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="ResumenCaja_Empresas" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[ResumenCaja_Empresas]/Members[ResumenCaja]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ResumenCaja_Empresa" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[ResumenCaja_Empresas]/Members[Empresa]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+  <Association
+    Name="Sucursal_Empresa">
+    <AssociationEnd
+      Name="Sucursal"
+      Multiplicity="Many"
+      EntityType="Sucursal" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Cliente_Empresa">
+    <AssociationEnd
+      Name="Cliente"
+      Multiplicity="Many"
+      EntityType="Cliente" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Turno_Empresa">
+    <AssociationEnd
+      Name="Turno"
+      Multiplicity="Many"
+      EntityType="Turno" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="FacturaTipoDetalle_Empresa">
+    <AssociationEnd
+      Name="FacturaTipoDetalle"
+      Multiplicity="Many"
+      EntityType="FacturaTipoDetalle" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="FacturaTipo_Empresa">
+    <AssociationEnd
+      Name="FacturaTipo"
+      Multiplicity="Many"
+      EntityType="FacturaTipo" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Proceso_Empresa">
+    <AssociationEnd
+      Name="Proceso"
+      Multiplicity="Many"
+      EntityType="Proceso" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="MedioPago_Empresa">
+    <AssociationEnd
+      Name="MedioPago"
+      Multiplicity="Many"
+      EntityType="MedioPago" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="FormaPago_Empresa">
+    <AssociationEnd
+      Name="FormaPago"
+      Multiplicity="Many"
+      EntityType="FormaPago" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="ActividadEconomica_Empresa">
+    <AssociationEnd
+      Name="ActividadEconomica"
+      Multiplicity="Many"
+      EntityType="ActividadEconomica" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="CausaAnulacion_Empresa">
+    <AssociationEnd
+      Name="CausaAnulacion"
+      Multiplicity="Many"
+      EntityType="CausaAnulacion" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="RolEmail_Empresa">
+    <AssociationEnd
+      Name="RolEmail"
+      Multiplicity="Many"
+      EntityType="RolEmail" />
+    <AssociationEnd
+      Name="Empresa"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="SendEMail_Empresa">
+    <AssociationEnd
+      Name="SendEMail"
+      Multiplicity="Many"
+      EntityType="SendEMail" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Parametro_Empresa">
+    <AssociationEnd
+      Name="Parametro"
+      Multiplicity="Many"
+      EntityType="Parametro" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="ResumenCaja_Empresa">
+    <AssociationEnd
+      Name="ResumenCaja"
+      Multiplicity="Many"
+      EntityType="ResumenCaja" />
+    <AssociationEnd
+      Name="Empresa"
+      Multiplicity="One"
+      EntityType="Empresa">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+</ServiceApplication>

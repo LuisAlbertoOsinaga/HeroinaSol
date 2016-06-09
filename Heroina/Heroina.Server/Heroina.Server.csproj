@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectTypeGuids>{DA98106F-DEFA-4A62-8804-0BD2F166A45D};{349c5851-65df-11da-9384-00065b846f21};{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B61ADB6C-35C7-4CC8-B4D1-2F45781D0657}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LightSwitchApplication</RootNamespace>
+    <AssemblyName>Application.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <LightSwitchVersion>v4.0</LightSwitchVersion>
+    <DefaultLanguage>es</DefaultLanguage>
+    <SupportedCultures>es</SupportedCultures>
+    <FileAlignment>512</FileAlignment>
+    <IgnoreDeployManagedRuntimeVersion>True</IgnoreDeployManagedRuntimeVersion>
+    <UseDeclareParametersXMLInMsDeploy>False</UseDeclareParametersXMLInMsDeploy>
+    <LightSwitchDisplayName>Server</LightSwitchDisplayName>
+    <LightSwitchProjectTypeV3>Server</LightSwitchProjectTypeV3>
+    <MicrosoftSdkDir Condition=" '$(MicrosoftSdkDir)' == '' ">$([System.IO.Path]::Combine($(MSBuildProgramFiles32), 'Microsoft SDKs'))</MicrosoftSdkDir>
+    <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' == '' ">$([System.IO.Path]::Combine($(MicrosoftSdkDir), 'LightSwitch', $(LightSwitchVersion)))</LightSwitchSDKPath>
+    <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' != '' and !HasTrailingSlash('$(LightSwitchSDKPath)')">$(LightSwitchSDKPath)\</LightSwitchSDKPath>
+    <NuGetPackagesFolder Condition=" Exists('..\Packages')">..\Packages\</NuGetPackagesFolder>
+    <NuGetPackagesFolder Condition=" Exists('..\..\Packages')">..\..\Packages\</NuGetPackagesFolder>
+    <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+    <NoWarn>1522</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseDesignTimeFeatures>false</UseDesignTimeFeatures>
+    <NoWarn>1522</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gn.SrvFany">
+      <HintPath>..\..\..\..\Gn.SrvFany\Gn.SrvFany\bin\Debug\Gn.SrvFany.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Extensions.Server">
+      <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Core">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Data">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Web">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.AppBridge">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.AppBridge.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.ExportProvider, Version=10.0.12.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.ExportProvider.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.CodeMarker, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.CodeMarker.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.ManifestService">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.ManifestService.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Model.Xaml">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Model.Xaml.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Server">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Server.Host">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.Host.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.PollingDuplex">
+      <HintPath>$(LightSwitchSDKPath)\Server\System.ServiceModel.PollingDuplex.dll</HintPath>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Services.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>$(NuGetPackagesFolder)\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Spatial">
+      <HintPath>$(LightSwitchSDKPath)\Server\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting.OData">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.OData.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Server">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Server.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSources\ApplicationData\Autoimpresor.lsml.cs">
+      <DependentUpon>AutoImpresores.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Cliente.lsml.cs">
+      <DependentUpon>Clientes.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\ClienteOperacion.lsml.cs">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Dosificacion.lsml.cs">
+      <DependentUpon>Dosificacions.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Empresa.lsml.cs">
+      <DependentUpon>Empresas.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Factura.lsml.cs">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\FacturaTipo.lsml.cs">
+      <DependentUpon>FacturaTipos.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\FacturaTipoDetalle.lsml.cs">
+      <DependentUpon>FacturaTipoDetalles.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\MedioPago.lsml.cs">
+      <DependentUpon>MedioPagos.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\RegistroCaja.lsml.cs">
+      <DependentUpon>RegistroCajas.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\ResumenCaja.lsml.cs">
+      <DependentUpon>ResumenCajas.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Sucursal.lsml.cs">
+      <DependentUpon>Sucursals.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Turno.lsml.cs">
+      <DependentUpon>Turnos.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\_ServicioMail.cs" />
+    <Compile Include="DataSources\ApplicationData\_Utilidades.cs" />
+    <Compile Include="DataSources\ApplicationData\_ServicioDosificaciones.cs" />
+    <Compile Include="DataSources\ApplicationData\_ServicioSecuencias.cs" />
+    <Compile Include="DataSources\ApplicationData\SoftCliente.lsml.cs">
+      <DependentUpon>SoftClientes.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\_ApplicationDataService.lsml.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Service.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <LightSwitchModel Include="Properties\DataSources\ApplicationData.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Empresas.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SoftClientes.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedSoftClientes.lsml">
+      <DependentUpon>SoftClientes.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Configuracions.lsml">
+      <SubType>Designer</SubType>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Sucursals.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedSucursales.lsml">
+      <DependentUpon>Sucursals.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Dosificacions.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedDosificacions.lsml">
+      <DependentUpon>Dosificacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Facturas.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\AutoImpresores.lsml">
+      <SubType>Designer</SubType>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedAutoImpresores.lsml">
+      <DependentUpon>AutoImpresores.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedFacturas.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+      <SubType>Designer</SubType>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Secuencias.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedSecuencias.lsml">
+      <DependentUpon>Secuencias.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\SucursalesXEmpresa.lsml">
+      <DependentUpon>Sucursals.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\AutoImpresoresXSucursal.lsml">
+      <DependentUpon>AutoImpresores.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturaDetalles.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedFacturaDetalles.lsml">
+      <DependentUpon>FacturaDetalles.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturaHospedajes.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedFacturaHospedajes.lsml">
+      <DependentUpon>FacturaHospedajes.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturaTipos.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturaTipoDetalles.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\EmpresasXSoftCliente.lsml">
+      <DependentUpon>Empresas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\SoftClienteX.lsml">
+      <DependentUpon>SoftClientes.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\DosificacionesXAutoimpresor.lsml">
+      <DependentUpon>Dosificacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXDosificacion.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturaDetallesXFactura.lsml">
+      <DependentUpon>FacturaDetalles.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Clientes.lsml">
+      <SubType>Designer</SubType>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\SortedClientes.lsml">
+      <DependentUpon>Clientes.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ClientesXEmpresa.lsml">
+      <DependentUpon>Clientes.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXAutoimpresor.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXAutoimpresorEntreEstadosEntreFechas.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXAutoimpresorEntreEstadosEntreFechasEntreTipos.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXSucursal.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXSucursalEntreEstadosEntreFechasEntreTipos.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXEmpresa.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXEmpresaEntreEstadosEntreFechasEntreTipos.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXDosificacionEntreEstadosEntreFechasEntreTipos.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\DosificacionesXEmpresa.lsml">
+      <DependentUpon>Dosificacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Procesos.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacions.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacionesXEmpresa.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacionesXEmpresaEntreFechas.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacionesXEmpresaEntreFechas_CreditosCobrados.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacionesXEmpresaEntreFechas_AnticiposVigentes.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacionesXEmpresaEntreFechas_AnticiposAplicados.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacionesXEmpresa_AnticiposVigentes.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacionesXEmpresaEntreClientes_AnticiposVigentes.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXEmpresaEntreFechas.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Turnos.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\TurnosXEmpresa.lsml">
+      <DependentUpon>Turnos.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\RegistroCajas.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\RegistrosXAutoimpresor.lsml">
+      <DependentUpon>RegistroCajas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\RegistroCajaActualizado.lsml">
+      <DependentUpon>RegistroCajas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXNumero.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\CliOperacionesXEmpresaEntreFechas_CreditosVigentes.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FormaPagos.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\MedioPagos.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\ActividadEconomicas.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\ActividadesEconomicasXEmpresaId.lsml">
+      <DependentUpon>ActividadEconomicas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturaTiposX.lsml">
+      <DependentUpon>FacturaTipos.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\CausaAnulaciones.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasPorTurno.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\RolEmails.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\RolMailsXEmpresa.lsml">
+      <DependentUpon>RolEmails.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\SendEMails.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Parametros.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\ParametrosXEmpresa.lsml">
+      <DependentUpon>Parametros.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ResumenCajas.lsml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="packages.config" />
+    <_ServerFile Include="default.aspx" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SoftCliente\SoftCliente.csproj">
+      <Project>{a5e7b278-c448-4f22-b24d-973c97eb4883}</Project>
+      <Name>SoftCliente</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7945/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{DA98106F-DEFA-4A62-8804-0BD2F166A45D}" Configuration="Debug|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+      <FlavorProperties GUID="{DA98106F-DEFA-4A62-8804-0BD2F166A45D}" Configuration="Release|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

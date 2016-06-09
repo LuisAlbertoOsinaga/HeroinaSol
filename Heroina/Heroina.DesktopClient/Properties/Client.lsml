@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.Heroina.DesktopClient"
+  TargetPlatform="RichClient"
+  Logo="Microsoft.LightSwitch.UserImageResources::Resources\interact_64.png"
+  Version="1.0.0.0"
+  Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
+  Theme="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <ModuleNamespace
+      Namespace="LightSwitchApplication" />
+    <Partial
+      IsPrimary="True" />
+  </Application.Attributes>
+  <EntityContainerGroup
+    Name="DataWorkspace">
+    <EntityContainerGroupProperty
+      Name="SecurityData"
+      EntityContainer="Microsoft.LightSwitch.Security:SecurityData">
+      <EntityContainerGroupProperty.Attributes>
+        <Generated />
+        <DisplayName
+          Value="Security Data" />
+        <Description
+          Value="Service that provides access to security-related data." />
+      </EntityContainerGroupProperty.Attributes>
+    </EntityContainerGroupProperty>
+    <EntityContainerGroupProperty
+      Name="ApplicationData"
+      EntityContainer="ApplicationData" />
+  </EntityContainerGroup>
+  <GlobalAttributeGroup>
+    <GlobalAttributeGroup.Attributes>
+      <Proxy
+        Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
+    </GlobalAttributeGroup.Attributes>
+  </GlobalAttributeGroup>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageDefiniciones" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageConfiguracion" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:VerReportesFacturacion" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:EmitirFacturas" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CambiarFecha" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:AnularFacturas" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageDosificaciones" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CambiarEmpresa" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CambiarSucursal" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CambiarAutoimpresor" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CambiarTipoFactura" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageSoftClientes" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:SincronizarDatos" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageProcesos" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageClientesOperaciones" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageFacturaCobroAnulacion" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageAnticipos" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageAnticiposAnulacion" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageReporteAnticipos" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageFacturasPorCobrar" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageFacturasPagos" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageAperturaCaja" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageRehabilitacionCaja" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManagePagoFacturas" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageTurnos" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CambiarHorasTurnos" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:HabilitarCaja" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageReaperturaCaja" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageMediosPagos" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageCajas" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageSupervision" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManageReportes" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:EditarDosificaciones" />
+    </Permission.Attributes>
+  </Permission>
+  <Application.Commands>
+    <ApplicationCommand
+      Name="ScreenCommandShowGridConfiguracion"
+      Target="!module/Methods[ShowGridConfiguracion]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridSoftClientes"
+      Target="!module/Methods[ShowGridSoftClientes]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridEmpresas"
+      Target="!module/Methods[ShowGridEmpresas]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridFacturaTipos"
+      Target="!module/Methods[ShowGridFacturaTipos]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridFacturaTipoDetalles"
+      Target="!module/Methods[ShowGridFacturaTipoDetalles]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridSucursales"
+      Target="!module/Methods[ShowGridSucursales]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridAutoimpresores"
+      Target="!module/Methods[ShowGridAutoimpresores]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridDosificaciones"
+      Target="!module/Methods[ShowGridDosificaciones]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturacion"
+      Target="!module/Methods[ShowScreenFacturacion]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFechaHoy"
+      Target="!module/Methods[ShowScreenFechaHoy]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridClientes"
+      Target="!module/Methods[ShowGridClientes]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturasXAutoimpresor"
+      Target="!module/Methods[ShowScreenFacturasXAutoimpresor]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturasXSucursal"
+      Target="!module/Methods[ShowScreenFacturasXSucursal]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturasXEmpresa"
+      Target="!module/Methods[ShowScreenFacturasXEmpresa]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturasXDosificacion"
+      Target="!module/Methods[ShowScreenFacturasXDosificacion]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenLibroVentas"
+      Target="!module/Methods[ShowScreenLibroVentas]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenProcesos"
+      Target="!module/Methods[ShowScreenProcesos]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenClientesOperaciones"
+      Target="!module/Methods[ShowScreenClientesOperaciones]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturasPorCobrar"
+      Target="!module/Methods[ShowScreenFacturasPorCobrar]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturasCobroAnulacion"
+      Target="!module/Methods[ShowScreenFacturasCobroAnulacion]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenAnticipos"
+      Target="!module/Methods[ShowScreenAnticipos]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenAnticiposReporte"
+      Target="!module/Methods[ShowScreenAnticiposReporte]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturaCobro"
+      Target="!module/Methods[ShowScreenFacturaCobro]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowGridTurnos"
+      Target="!module/Methods[ShowGridTurnos]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenAperturaCaja"
+      Target="!module/Methods[ShowScreenAperturaCaja]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenEmpresas"
+      Target="!module/Methods[ShowScreenEmpresas]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenHabilitarCaja"
+      Target="!module/Methods[ShowScreenHabilitarCaja]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenCierreCaja"
+      Target="!module/Methods[ShowScreenCierreCaja]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenReaperturaCaja"
+      Target="!module/Methods[ShowScreenReaperturaCaja]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturaXNro"
+      Target="!module/Methods[ShowScreenFacturaXNro]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenMedioPagos"
+      Target="!module/Methods[ShowScreenMedioPagos]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenActividadesEconomicas"
+      Target="!module/Methods[ShowScreenActividadesEconomicas]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturaPorNumero"
+      Target="!module/Methods[ShowScreenFacturaPorNumero]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenCausasAnulaciones"
+      Target="!module/Methods[ShowScreenCausasAnulaciones]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturaAnulacion"
+      Target="!module/Methods[ShowScreenFacturaAnulacion]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturaAnulador"
+      Target="!module/Methods[ShowScreenFacturaAnulador]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenResumenCaja"
+      Target="!module/Methods[ShowScreenResumenCaja]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenDetalleFacturas"
+      Target="!module/Methods[ShowScreenDetalleFacturas]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenSupervisionCaja"
+      Target="!module/Methods[ShowScreenSupervisionCaja]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenResumenCajaDiario"
+      Target="!module/Methods[ShowScreenResumenCajaDiario]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenCerrarCaja"
+      Target="!module/Methods[ShowScreenCerrarCaja]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenRolMails"
+      Target="!module/Methods[ShowScreenRolMails]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenParametros"
+      Target="!module/Methods[ShowScreenParametros]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturasXCobrar"
+      Target="!module/Methods[ShowScreenFacturasXCobrar]" />
+  </Application.Commands>
+  <Application.NavigationItems>
+    <ApplicationNavigationGroup
+      Name="Tasks"
+      DefaultItem="!module/NavigationItems[Tasks]/Children[ScreenFacturacion]">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Caja" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="ScreenAperturaCaja"
+        Command="!module/Commands[ScreenCommandShowScreenAperturaCaja]" />
+      <ApplicationNavigationLink
+        Name="ScreenCierreCaja"
+        Command="!module/Commands[ScreenCommandShowScreenCierreCaja]" />
+      <ApplicationNavigationLink
+        Name="ScreenFacturacion"
+        Command="!module/Commands[ScreenCommandShowScreenFacturacion]" />
+      <ApplicationNavigationLink
+        Name="ScreenFacturaCobro"
+        Command="!module/Commands[ScreenCommandShowScreenFacturaCobro]" />
+      <ApplicationNavigationLink
+        Name="ScreenAnticipos"
+        Command="!module/Commands[ScreenCommandShowScreenAnticipos]" />
+      <ApplicationNavigationLink
+        Name="GridClientes"
+        Command="!module/Commands[ScreenCommandShowGridClientes]" />
+      <ApplicationNavigationLink
+        Name="ScreenFacturaAnulacion"
+        Command="!module/Commands[ScreenCommandShowScreenFacturaAnulacion]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group3">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Supervisión" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link19"
+        Command="!module/Commands[ScreenCommandShowScreenHabilitarCaja]" />
+      <ApplicationNavigationLink
+        Name="link20"
+        Command="!module/Commands[ScreenCommandShowScreenReaperturaCaja]" />
+      <ApplicationNavigationLink
+        Name="ScreenSupervisionCaja"
+        Command="!module/Commands[ScreenCommandShowScreenSupervisionCaja]" />
+      <ApplicationNavigationLink
+        Name="link12"
+        Command="!module/Commands[ScreenCommandShowGridDosificaciones]" />
+      <ApplicationNavigationLink
+        Name="link18"
+        Command="!module/Commands[ScreenCommandShowScreenFacturasCobroAnulacion]" />
+      <ApplicationNavigationLink
+        Name="link13"
+        Command="!module/Commands[ScreenCommandShowScreenAnticiposReporte]" />
+      <ApplicationNavigationLink
+        Name="link24"
+        Command="!module/Commands[ScreenCommandShowScreenFacturaAnulador]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group2">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Reportes" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link28"
+        Command="!module/Commands[ScreenCommandShowScreenResumenCajaDiario]" />
+      <ApplicationNavigationLink
+        Name="link23"
+        Command="!module/Commands[ScreenCommandShowScreenFacturaPorNumero]" />
+      <ApplicationNavigationLink
+        Name="link9"
+        Command="!module/Commands[ScreenCommandShowScreenFacturasXEmpresa]" />
+      <ApplicationNavigationLink
+        Name="link10"
+        Command="!module/Commands[ScreenCommandShowScreenFacturasXDosificacion]" />
+      <ApplicationNavigationLink
+        Name="link15"
+        Command="!module/Commands[ScreenCommandShowScreenFacturasPorCobrar]" />
+      <ApplicationNavigationLink
+        Name="link14"
+        Command="!module/Commands[ScreenCommandShowScreenClientesOperaciones]" />
+      <ApplicationNavigationLink
+        Name="link11"
+        Command="!module/Commands[ScreenCommandShowScreenLibroVentas]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="Administration">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Administración" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="RolesScreen"
+        Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowRolesScreen]" />
+      <ApplicationNavigationLink
+        Name="UsersScreen"
+        Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Definiciones" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link2"
+        Command="!module/Commands[ScreenCommandShowGridEmpresas]" />
+      <ApplicationNavigationLink
+        Name="link3"
+        Command="!module/Commands[ScreenCommandShowGridSucursales]" />
+      <ApplicationNavigationLink
+        Name="link4"
+        Command="!module/Commands[ScreenCommandShowGridAutoimpresores]" />
+      <ApplicationNavigationLink
+        Name="link22"
+        Command="!module/Commands[ScreenCommandShowScreenActividadesEconomicas]" />
+      <ApplicationNavigationLink
+        Name="link5"
+        Command="!module/Commands[ScreenCommandShowGridFacturaTipos]" />
+      <ApplicationNavigationLink
+        Name="link6"
+        Command="!module/Commands[ScreenCommandShowGridFacturaTipoDetalles]" />
+      <ApplicationNavigationLink
+        Name="link21"
+        Command="!module/Commands[ScreenCommandShowScreenMedioPagos]" />
+      <ApplicationNavigationLink
+        Name="link16"
+        Command="!module/Commands[ScreenCommandShowGridTurnos]" />
+      <ApplicationNavigationLink
+        Name="link7"
+        Command="!module/Commands[ScreenCommandShowScreenCausasAnulaciones]" />
+      <ApplicationNavigationLink
+        Name="link27"
+        Command="!module/Commands[ScreenCommandShowScreenParametros]" />
+      <ApplicationNavigationLink
+        Name="link26"
+        Command="!module/Commands[ScreenCommandShowScreenRolMails]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group1">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Configuración" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link1"
+        Command="!module/Commands[ScreenCommandShowGridSoftClientes]" />
+      <ApplicationNavigationLink
+        Name="link"
+        Command="!module/Commands[ScreenCommandShowGridConfiguracion]" />
+    </ApplicationNavigationGroup>
+  </Application.NavigationItems>
+</Application>
