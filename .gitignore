@@ -189,4 +189,4 @@ _Pvt_Extensions/
 ModelManifest.xml
 
 # LightSwitch include archivos en folder Data
-!Heroina/bin/Data/
+!*/bin/Data/
