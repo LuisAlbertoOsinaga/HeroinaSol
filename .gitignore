@@ -13,7 +13,7 @@
 x64/
 build/
 bld/
-[Bb]in/
+# [Bb]in/
 [Oo]bj/
 
 # Roslyn cache directories
@@ -172,8 +172,8 @@ UpgradeLog*.XML
 UpgradeLog*.htm
 
 # SQL Server files
-*.mdf
-*.ldf
+# *.mdf
+# *.ldf
 
 # Business Intelligence projects
 *.rdl.data
@@ -187,6 +187,3 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
-
-# LightSwitch include archivos en folder Data
-!*/bin/Data/
