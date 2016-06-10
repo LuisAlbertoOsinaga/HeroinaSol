@@ -58,7 +58,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gn.SrvFany">
-      <HintPath>..\..\..\..\Gn.SrvFany\Gn.SrvFany\bin\Debug\Gn.SrvFany.dll</HintPath>
+      <HintPath>..\..\packages\Gn.SrvFany.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.LightSwitch.Extensions.Server">
       <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll</HintPath>

@@ -74,19 +74,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZLib.Silverlight">
-      <HintPath>..\..\packages\QR\ICSharpCode.SharpZLib.Silverlight.dll</HintPath>
+      <HintPath>..\..\packages\ICSharpCode.SharpZLib.Silverlight.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools">
-      <HintPath>..\..\packages\QR\ImageTools.dll</HintPath>
+      <HintPath>..\..\packages\ImageTools.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools.IO.Bmp">
-      <HintPath>..\..\packages\QR\ImageTools.IO.Bmp.dll</HintPath>
+      <HintPath>..\..\packages\ImageTools.IO.Bmp.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools.IO.Png">
-      <HintPath>..\..\packages\QR\ImageTools.IO.Png.dll</HintPath>
+      <HintPath>..\..\packages\ImageTools.IO.Png.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools.Utils">
-      <HintPath>..\..\packages\QR\ImageTools.Utils.dll</HintPath>
+      <HintPath>..\..\packages\ImageTools.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.LightSwitch, Version=10.0.12.0, Culture=neutral, PublicKeyToken=8e9329cecb4700e9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -239,7 +239,7 @@
       <ProjectCritical>True</ProjectCritical>
     </Reference>
     <Reference Include="zxing.sl4">
-      <HintPath>..\..\packages\QR\zxing.sl4.dll</HintPath>
+      <HintPath>..\..\packages\zxing.sl4.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

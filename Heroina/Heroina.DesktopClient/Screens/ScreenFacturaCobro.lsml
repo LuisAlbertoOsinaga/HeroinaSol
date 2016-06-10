@@ -1566,6 +1566,20 @@
                     Member="ScreenFacturaCobro/Properties[CredFechaFin]" />
                 </ChainExpression>
               </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="EstadoIni">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ScreenFacturaCobro/Properties[CreEstadoIni]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="EstadoFin">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ScreenFacturaCobro/Properties[CreEstadoFin]" />
+                </ChainExpression>
+              </ArgumentExpression>
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
@@ -1662,6 +1676,12 @@
           <Required />
         </ScreenProperty.Attributes>
       </ScreenProperty>
+      <ScreenProperty
+        Name="CreEstadoIni"
+        PropertyType=":String?" />
+      <ScreenProperty
+        Name="CreEstadoFin"
+        PropertyType=":String?" />
       <ScreenProperty
         Name="CredFechaIni"
         PropertyType=":DateTime">

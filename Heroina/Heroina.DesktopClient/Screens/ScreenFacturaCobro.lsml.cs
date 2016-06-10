@@ -152,6 +152,9 @@ namespace LightSwitchApplication
 
         bool Inits()
         {
+            CreEstadoIni = "V";
+            CreEstadoFin = "V";
+
             Autoimpresor = (from a in DataWorkspace.ApplicationData.Autoimpresores
                                                where a.Nombre == Cfg.Autoimpresor && a.Sucursal.Nombre == Cfg.Sucursal &&
                                                      a.Sucursal.Empresa.Nombre == Cfg.Empresa
