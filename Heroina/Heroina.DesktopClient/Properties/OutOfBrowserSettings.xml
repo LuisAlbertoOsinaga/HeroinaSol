@@ -4,7 +4,7 @@
     <WindowSettings Title="CashFlow" Top="0" Left="0" WindowStartupLocation="Manual" />
   </OutOfBrowserSettings.WindowSettings>
   <OutOfBrowserSettings.SecuritySettings>
-    <SecuritySettings ElevatedPermissions="Required" />
+    <SecuritySettings ElevatedPermissions="NotRequired" />
   </OutOfBrowserSettings.SecuritySettings>
   <OutOfBrowserSettings.Icons>
     <Icon Size="32,32">Resources/interact_32.png</Icon>

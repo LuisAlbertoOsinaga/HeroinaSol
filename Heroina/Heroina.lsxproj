@@ -22,7 +22,7 @@
     <ApplicationServerType>IIS</ApplicationServerType>
     <AuthenticationType>Forms</AuthenticationType>
     <ApplicationName>CashFlow</ApplicationName>
-    <AssemblyVersion>1.4.111.0</AssemblyVersion>
+    <AssemblyVersion>1.4.116.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -58,7 +58,7 @@
     <RequireSecureConnection>False</RequireSecureConnection>
     <DefaultDatabaseName>CashFlow</DefaultDatabaseName>
     <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
-    <PublishLocation>E:\Work\Heroina\HeroinaSol\Publish\HLS\IIS\</PublishLocation>
+    <PublishLocation>Publish\HLS\IIS</PublishLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug</OutputPath>
