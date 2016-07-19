@@ -444,8 +444,8 @@
         Name="link10"
         Command="!module/Commands[ScreenCommandShowScreenFacturasXDosificacion]" />
       <ApplicationNavigationLink
-        Name="link15"
-        Command="!module/Commands[ScreenCommandShowScreenFacturasPorCobrar]" />
+        Name="link8"
+        Command="!module/Commands[ScreenCommandShowScreenFacturasXCobrar]" />
       <ApplicationNavigationLink
         Name="link14"
         Command="!module/Commands[ScreenCommandShowScreenClientesOperaciones]" />

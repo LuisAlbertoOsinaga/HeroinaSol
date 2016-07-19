@@ -363,6 +363,9 @@
     <Compile Include="Screens\ScreenFacturaDef.lsml.cs">
       <DependentUpon>ScreenFacturaDef.lsml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ScreenFacturasXCobrar.lsml.cs">
+      <DependentUpon>ScreenFacturasXCobrar.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\ScreenFacturaXNumero.lsml.cs">
       <DependentUpon>ScreenFacturaXNumero.lsml</DependentUpon>
     </Compile>
@@ -472,7 +475,6 @@
     <LightSwitchModel Include="Screens\ScreenCerrarCaja.lsml" />
     <LightSwitchModel Include="Screens\ScreenRolMails.lsml" />
     <LightSwitchModel Include="Screens\ScreenParametros.lsml" />
-    <LightSwitchModel Include="Screens\ScreenFacturasXCobrar.lsml" />
     <Resource Include="Resources\info_32.png" />
     <Resource Include="Resources\clipboard_32.png" />
     <Content Include="Resources\interact_32.png" />
@@ -510,6 +512,7 @@
     <None Include="Properties\OutOfBrowserSettings.xml" />
     <ClientResource Include="Properties\Config.xml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\ScreenFacturasXCobrar.lsml" />
     <LightSwitchModel Include="Screens\ScreenLibroVentas.lsml" />
     <LightSwitchModel Include="Screens\ScreenFacturasXDosificacion.lsml" />
     <LightSwitchModel Include="Screens\ScreenFacturasXFechas.lsml" />
