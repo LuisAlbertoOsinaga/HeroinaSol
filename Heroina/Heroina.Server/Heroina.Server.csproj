@@ -417,6 +417,9 @@
       <DependentUpon>Parametros.lsml</DependentUpon>
     </LightSwitchModel>
     <LightSwitchModel Include="DataSources\ApplicationData\ResumenCajas.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\FacturasXEmpresaEntreEstadosEntreFechasEntreTiposXCobrar.lsml">
+      <DependentUpon>Facturas.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
