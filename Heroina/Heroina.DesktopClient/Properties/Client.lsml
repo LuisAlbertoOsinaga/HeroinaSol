@@ -331,8 +331,8 @@
       Name="ScreenCommandShowScreenActividadesEconomicas"
       Target="!module/Methods[ShowScreenActividadesEconomicas]" />
     <ApplicationCommand
-      Name="ScreenCommandShowScreenFacturaPorNumero"
-      Target="!module/Methods[ShowScreenFacturaPorNumero]" />
+      Name="ScreenCommandShowScreenFacturaXNumero"
+      Target="!module/Methods[ShowScreenFacturaXNumero]" />
     <ApplicationCommand
       Name="ScreenCommandShowScreenCausasAnulaciones"
       Target="!module/Methods[ShowScreenCausasAnulaciones]" />
@@ -435,8 +435,8 @@
         Name="link28"
         Command="!module/Commands[ScreenCommandShowScreenResumenCajaDiario]" />
       <ApplicationNavigationLink
-        Name="link23"
-        Command="!module/Commands[ScreenCommandShowScreenFacturaPorNumero]" />
+        Name="ScreenFacturaXNumero"
+        Command="!module/Commands[ScreenCommandShowScreenFacturaXNumero]" />
       <ApplicationNavigationLink
         Name="ScreenFacturasXFechas"
         Command="!module/Commands[ScreenCommandShowScreenFacturasXFechas]" />

@@ -363,8 +363,8 @@
     <Compile Include="Screens\ScreenFacturaDef.lsml.cs">
       <DependentUpon>ScreenFacturaDef.lsml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\ScreenFacturaPorNumero.lsml.cs">
-      <DependentUpon>ScreenFacturaPorNumero.lsml</DependentUpon>
+    <Compile Include="Screens\ScreenFacturaXNumero.lsml.cs">
+      <DependentUpon>ScreenFacturaXNumero.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\ScreenFacturaXNro.lsml.cs">
       <DependentUpon>ScreenFacturaXNro.lsml</DependentUpon>
@@ -447,7 +447,7 @@
     <LightSwitchModel Include="Screens\ScreenMedioPagos.lsml" />
     <Content Include="Resources\ResumenCaja_01.dotx" />
     <LightSwitchModel Include="Screens\ScreenActividadesEconomicas.lsml" />
-    <LightSwitchModel Include="Screens\ScreenFacturaPorNumero.lsml" />
+    <LightSwitchModel Include="Screens\ScreenFacturaXNumero.lsml" />
     <LightSwitchModel Include="Screens\ScreenCausasAnulaciones.lsml" />
     <LightSwitchModel Include="Screens\ScreenFacturaAnulacion.lsml">
       <SubType>Designer</SubType>

@@ -9,7 +9,7 @@ using Microsoft.LightSwitch.Presentation;
 using Microsoft.LightSwitch.Presentation.Extensions;
 namespace LightSwitchApplication
 {
-    public partial class ScreenFacturaPorNumero
+    public partial class ScreenFacturaXNumero
     {
         #region Propiedades
 
@@ -70,7 +70,7 @@ namespace LightSwitchApplication
 
         #region Metodos Generados
 
-        partial void ScreenFacturaPorNumero_InitializeDataWorkspace(List<IDataService> saveChangesTo)
+        partial void ScreenFacturaXNumero_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
             InitDataWorkspace();
             FindControls();

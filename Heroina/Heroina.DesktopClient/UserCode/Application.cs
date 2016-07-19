@@ -326,7 +326,7 @@ namespace LightSwitchApplication
             #endif
         }
 
-        partial void ScreenFacturaPorNumero_CanRun(ref bool result)
+        partial void ScreenFacturaXNumero_CanRun(ref bool result)
         {
             #if DEBUG
             result = Application.Current.User.Name == "TestUser";

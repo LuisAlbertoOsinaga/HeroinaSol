@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ScreenFacturaPorNumero"
+    Name="ScreenFacturaXNumero"
     LaunchMode="Multiple">
     <Screen.Attributes>
       <DisplayName
@@ -37,7 +37,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ScreenFacturaPorNumero/Properties[EmpresaNombre]" />
+                      Member="ScreenFacturaXNumero/Properties[EmpresaNombre]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -62,7 +62,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ScreenFacturaPorNumero/Properties[SoftProducto]" />
+                      Member="ScreenFacturaXNumero/Properties[SoftProducto]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -142,7 +142,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ScreenFacturaPorNumero/Properties[FacturaNumero]" />
+                      Member="ScreenFacturaXNumero/Properties[FacturaNumero]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -187,7 +187,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="ScreenFacturaPorNumero/Methods[BuscarFactura]" />
+                        Target="ScreenFacturaXNumero/Methods[BuscarFactura]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -221,7 +221,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ScreenFacturaPorNumero/Properties[Mensaje]" />
+                      Member="ScreenFacturaXNumero/Properties[Mensaje]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -286,7 +286,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ScreenFacturaPorNumero/Properties[Facturas]" />
+                      Member="ScreenFacturaXNumero/Properties[Facturas]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -299,6 +299,56 @@
                     <ChainExpression />
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
+                <ContentItem
+                  Name="FacturaTipo"
+                  Kind="Details"
+                  DataType="FacturaTipo">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Factura/Properties[FacturaTipo]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="FacturaTipo1"
+                    Kind="Details"
+                    DataType="FacturaTipo">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Dosificacion"
+                  Kind="Details"
+                  DataType="Dosificacion">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Nro de Autorización" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Factura/Properties[Dosificacion]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Dosificacion1"
+                    Kind="Details"
+                    DataType="Dosificacion">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
                 <ContentItem
                   Name="Nro"
                   Kind="Value"
@@ -324,29 +374,18 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="FacturaTipo"
-                  Kind="Details"
-                  DataType="FacturaTipo">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Factura/Properties[FacturaTipo]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="FacturaTipo1"
-                    Kind="Details"
-                    DataType="FacturaTipo">
-                    <ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.RichClient:DateTimeViewerBase/Properties[ShowTime]">
                       <ScreenExpressionTree>
-                        <ChainExpression />
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="False"
+                            ResultType=":Boolean" />
+                        </ChainExpression>
                       </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
                   Name="ClienteNombre"
@@ -414,29 +453,6 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Dosificacion"
-                  Kind="Details"
-                  DataType="Dosificacion">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Factura/Properties[Dosificacion]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="Dosificacion1"
-                    Kind="Details"
-                    DataType="Dosificacion">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
                   Name="Estado"
                   Kind="Value"
                   DataType=":String">
@@ -498,7 +514,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="ScreenFacturaPorNumero/Methods[VerFactura]" />
+                          Target="ScreenFacturaXNumero/Methods[VerFactura]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -571,7 +587,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="ScreenFacturaPorNumero/Methods[Save]" />
+                    Target="ScreenFacturaXNumero/Methods[Save]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -583,7 +599,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="ScreenFacturaPorNumero/Methods[Refresh]" />
+                    Target="ScreenFacturaXNumero/Methods[Refresh]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -656,12 +672,12 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ScreenFacturaPorNumero/Properties[Empresas]/Query">
+              Target="ScreenFacturaXNumero/Properties[Empresas]/Query">
               <ArgumentExpression
                 Parameter="SoftClienteId">
                 <ChainExpression>
                   <MemberExpression
-                    Member="ScreenFacturaPorNumero/Properties[SoftCliente]" />
+                    Member="ScreenFacturaXNumero/Properties[SoftCliente]" />
                   <MemberExpression
                     Member="Id" />
                 </ChainExpression>
@@ -702,12 +718,12 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ScreenFacturaPorNumero/Properties[Facturas]/Query">
+              Target="ScreenFacturaXNumero/Properties[Facturas]/Query">
               <ArgumentExpression
                 Parameter="EmpresaId">
                 <ChainExpression>
                   <MemberExpression
-                    Member="ScreenFacturaPorNumero/Properties[Empresas]" />
+                    Member="ScreenFacturaXNumero/Properties[Empresas]" />
                   <MemberExpression
                     Member="SelectedItem" />
                   <MemberExpression
@@ -718,7 +734,7 @@
                 Parameter="FacturaNro">
                 <ChainExpression>
                   <MemberExpression
-                    Member="ScreenFacturaPorNumero/Properties[FacturaNumero]" />
+                    Member="ScreenFacturaXNumero/Properties[FacturaNumero]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -741,10 +757,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="ShowScreenFacturaPorNumero">
+      Name="ShowScreenFacturaXNumero">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ScreenFacturaPorNumero" />
+          TargetScreen="ScreenFacturaXNumero" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>
