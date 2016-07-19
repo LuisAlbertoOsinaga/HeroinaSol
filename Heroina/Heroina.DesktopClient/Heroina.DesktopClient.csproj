@@ -384,8 +384,8 @@
     <Compile Include="Screens\ScreenFacturasXDosificacion.lsml.cs">
       <DependentUpon>ScreenFacturasXDosificacion.lsml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\ScreenFacturasXEmpresa.lsml.cs">
-      <DependentUpon>ScreenFacturasXEmpresa.lsml</DependentUpon>
+    <Compile Include="Screens\ScreenFacturasXFechas.lsml.cs">
+      <DependentUpon>ScreenFacturasXFechas.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\ScreenFacturasXSucursal.lsml.cs">
       <DependentUpon>ScreenFacturasXSucursal.lsml</DependentUpon>
@@ -512,7 +512,7 @@
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\ScreenLibroVentas.lsml" />
     <LightSwitchModel Include="Screens\ScreenFacturasXDosificacion.lsml" />
-    <LightSwitchModel Include="Screens\ScreenFacturasXEmpresa.lsml" />
+    <LightSwitchModel Include="Screens\ScreenFacturasXFechas.lsml" />
     <LightSwitchModel Include="Screens\ScreenFacturasXSucursal.lsml" />
     <LightSwitchModel Include="Screens\GridConfiguracion.lsml" />
     <LightSwitchModel Include="Screens\GridSoftClientes.lsml" />

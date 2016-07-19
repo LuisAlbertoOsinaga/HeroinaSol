@@ -274,8 +274,8 @@
       Name="ScreenCommandShowScreenFacturasXSucursal"
       Target="!module/Methods[ShowScreenFacturasXSucursal]" />
     <ApplicationCommand
-      Name="ScreenCommandShowScreenFacturasXEmpresa"
-      Target="!module/Methods[ShowScreenFacturasXEmpresa]" />
+      Name="ScreenCommandShowScreenFacturasXFechas"
+      Target="!module/Methods[ShowScreenFacturasXFechas]" />
     <ApplicationCommand
       Name="ScreenCommandShowScreenFacturasXDosificacion"
       Target="!module/Methods[ShowScreenFacturasXDosificacion]" />
@@ -438,8 +438,8 @@
         Name="link23"
         Command="!module/Commands[ScreenCommandShowScreenFacturaPorNumero]" />
       <ApplicationNavigationLink
-        Name="link9"
-        Command="!module/Commands[ScreenCommandShowScreenFacturasXEmpresa]" />
+        Name="ScreenFacturasXFechas"
+        Command="!module/Commands[ScreenCommandShowScreenFacturasXFechas]" />
       <ApplicationNavigationLink
         Name="link10"
         Command="!module/Commands[ScreenCommandShowScreenFacturasXDosificacion]" />

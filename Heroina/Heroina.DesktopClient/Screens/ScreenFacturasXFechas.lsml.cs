@@ -10,7 +10,7 @@ using Microsoft.LightSwitch.Presentation.Extensions;
 
 namespace LightSwitchApplication
 {
-    public partial class ScreenFacturasXEmpresa
+    public partial class ScreenFacturasXFechas
     {
         #region Propiedades
 
@@ -129,7 +129,7 @@ namespace LightSwitchApplication
 
         #region Metodos Generados
 
-        partial void ScreenFacturasXEmpresa_InitializeDataWorkspace(List<IDataService> saveChangesTo)
+        partial void ScreenFacturasXFechas_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
             InitDataWorkspace();
             FindControls();
