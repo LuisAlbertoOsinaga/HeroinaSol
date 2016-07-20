@@ -413,6 +413,20 @@
                       </ContentItem.PropertySources>
                     </ContentItem>
                     <ContentItem
+                      Name="NroAutorizacion"
+                      Kind="Value"
+                      DataType=":String?"
+                      View="Microsoft.LightSwitch.RichClient:TextBox">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="ClienteOperacion/Properties[NroAutorizacion]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                    <ContentItem
                       Name="FacturaNro"
                       Kind="Value"
                       DataType=":String?"

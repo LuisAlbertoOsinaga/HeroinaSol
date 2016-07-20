@@ -469,7 +469,7 @@ namespace LightSwitchApplication
             Factura.MedioPagoContadoUS = "EF";
             Factura.Nro = ServicioDosificacionex.GetFacturaSiguienteFormat(DataWorkspace, Dosificacion.Id);
             SinCreditoFiscal = Factura.FacturaTipo.SinCreditoFiscal ? "SIN CRÉDITO FISCAL" : string.Empty;
-            groupFacturaHeader.DisplayName = " FACTURA " + Factura.Nro + " ";
+            groupFacturaHeader.DisplayName = " FACTURA " + Factura.Dosificacion.NroAutorizacion + " - " + Factura.Nro + " ";
 
             areaFactura.IsVisible = true;
             comboFacturaTipos.IsEnabled = true;

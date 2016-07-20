@@ -331,7 +331,8 @@ namespace LightSwitchApplication
         {
             ClienteOperacion operacionXCobrar = OperacionesXCobrar.SelectedItem;
             decimal montoPagado = (from op in operacionXCobrar.OperacionesRelacionadas
-                                   where op.FacturaNro == operacionXCobrar.FacturaNro && op.TipoOperacion == "CC" && op.Estado == "V"
+                                   where op.NroAutorizacion == operacionXCobrar.NroAutorizacion && 
+                                            op.FacturaNro == operacionXCobrar.FacturaNro && op.TipoOperacion == "CC" && op.Estado == "V"
                                    select op.Monto).Sum();
             MedioPago medioPago = DataWorkspace.ApplicationData.MedioPagos.FirstOrDefault();
             FormaPago = new FormaPago();
@@ -370,7 +371,7 @@ namespace LightSwitchApplication
                 if (opCobrada.Monto == OperacionesPagadas.Sum(op => op.Monto))
                 {
                     Factura = (from Factura f in DataWorkspace.ApplicationData.Facturas
-                               where f.Nro == opCobrada.FacturaNro
+                               where f.Dosificacion.NroAutorizacion == opCobrada.NroAutorizacion && f.Nro == opCobrada.FacturaNro
                                select f).SingleOrDefault();
                     if(Factura != null)
                         Factura.Situacion = "P";    // Pagada
