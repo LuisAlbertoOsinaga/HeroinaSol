@@ -1310,7 +1310,7 @@
             DataType="CollectionView$Factura">
             <ContentItem.Attributes>
               <DisplayName
-                Value="Facturas" />
+                Value="Facturas por Cobrar" />
             </ContentItem.Attributes>
             <ContentItem.DataSource>
               <ScreenExpressionTree>

@@ -663,6 +663,19 @@
                 </ContentItem>
               </ContentItem>
               <ContentItem
+                Name="NroAutorizacion"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ClienteOperacion/Properties[NroAutorizacion]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
                 Name="FacturaNro"
                 Kind="Value"
                 DataType=":String?">
@@ -867,6 +880,23 @@
                         Member="SelectedItem" />
                       <MemberExpression
                         Member="TipoOperacion" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="ClienteOperaciones_SelectedItem_NroAutorizacion"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ScreenClientesOperaciones/Properties[ClienteOperaciones]" />
+                      <MemberExpression
+                        Member="SelectedItem" />
+                      <MemberExpression
+                        Member="NroAutorizacion" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -1444,6 +1474,31 @@
               <DisplayName
                 Value="Info Factura" />
             </ContentItem.Attributes>
+            <ContentItem
+              Name="Factura_Dosificacion"
+              Kind="Details"
+              DataType="Dosificacion">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ScreenClientesOperaciones/Properties[Factura]" />
+                    <MemberExpression
+                      Member="Dosificacion" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="Dosificacion"
+                Kind="Details"
+                DataType="Dosificacion">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
             <ContentItem
               Name="Factura_Nro"
               Kind="Value"

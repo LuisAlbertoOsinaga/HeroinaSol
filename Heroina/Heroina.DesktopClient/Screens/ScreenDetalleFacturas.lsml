@@ -513,6 +513,33 @@
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
+                    Name="Dosificacion"
+                    Kind="Details"
+                    DataType="Dosificacion">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Nro de Autorización" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Factura/Properties[Dosificacion]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Dosificacion1"
+                      Kind="Details"
+                      DataType="Dosificacion">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                  </ContentItem>
+                  <ContentItem
                     Name="Nro"
                     Kind="Value"
                     DataType=":String">
@@ -683,6 +710,16 @@
                         <ConstantExpression
                           Value="True"
                           ResultType=":Boolean" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:ColumnsLayout/Properties[WeightedColumnWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="3"
+                          ResultType=":Double" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>

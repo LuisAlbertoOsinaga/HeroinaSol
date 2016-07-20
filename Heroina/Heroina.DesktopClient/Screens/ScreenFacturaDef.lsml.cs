@@ -210,7 +210,7 @@ namespace LightSwitchApplication
                            select f).SingleOrDefault();
             }
 
-            groupFacturaHeader.DisplayName = string.Format("Factura {0}", FacturaNumero);
+            groupFacturaHeader.DisplayName = string.Format("Factura {0} - {1}", NroAutorizacion, FacturaNumero);
         }
 
         void PrintFacturax(bool original, int nroCopias, bool headerIzq)

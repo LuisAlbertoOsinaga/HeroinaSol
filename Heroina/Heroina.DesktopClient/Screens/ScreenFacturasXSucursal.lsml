@@ -1498,6 +1498,24 @@
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
+                Name="Dosificacion"
+                Kind="Details"
+                DataType="Dosificacion"
+                View="Microsoft.LightSwitch.RichClient:Summary">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Nro de Autorización" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Factura/Properties[Dosificacion]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
                 Name="Nro"
                 Kind="Value"
                 DataType=":String"
@@ -1523,6 +1541,18 @@
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:DateTimeViewerBase/Properties[ShowTime]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="False"
+                          ResultType=":Boolean" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
                 Name="ClienteNombre"
@@ -1604,20 +1634,6 @@
                     <ChainExpression>
                       <MemberExpression
                         Member="Factura/Properties[FacturaTipo]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Dosificacion"
-                Kind="Details"
-                DataType="Dosificacion"
-                View="Microsoft.LightSwitch.RichClient:Summary">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="Factura/Properties[Dosificacion]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
