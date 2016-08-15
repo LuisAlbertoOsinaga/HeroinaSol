@@ -1485,6 +1485,24 @@
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
+                Name="Situacion"
+                Kind="Value"
+                DataType=":String"
+                View="Microsoft.LightSwitch.RichClient:Label">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Situación" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Factura/Properties[Situacion]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
                 Name="CausaAnulacion"
                 Kind="Details"
                 DataType="CausaAnulacion">
