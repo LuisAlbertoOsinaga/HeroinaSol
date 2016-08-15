@@ -170,7 +170,7 @@ namespace LightSwitchApplication
                         for (int i = 0; i < facturas.Length; i++)
                         {
                             wordDoc.Tables[1].Rows.Add(wordDoc.Tables[1].Rows[i + 3]);
-                            wordDoc.Tables[1].Cell(i + 3, 1).Range.Text = facturas[i].Nro;
+                            wordDoc.Tables[1].Cell(i + 3, 1).Range.Text = facturas[i].Dosificacion.NroAutorizacion + " - " + facturas[i].Nro;
                             wordDoc.Tables[1].Cell(i + 3, 2).Range.Text = facturas[i].FechaEmision.ToString("dd-MM-yyyy hh:mm:ss");
                             wordDoc.Tables[1].Cell(i + 3, 3).Range.Text = facturas[i].ClienteNombre;
                             wordDoc.Tables[1].Cell(i + 3, 4).Range.Text = facturas[i].ClienteNIT;
@@ -178,7 +178,7 @@ namespace LightSwitchApplication
                             wordDoc.Tables[1].Cell(i + 3, 6).Range.Text = facturas[i].Descuento.ToString("###,###,###.00");
                             wordDoc.Tables[1].Cell(i + 3, 7).Range.Text = facturas[i].Monto.ToString("###,###,###.00");
                             wordDoc.Tables[1].Cell(i + 3, 8).Range.Text = facturas[i].FacturaTipo.Descripcion;
-                            wordDoc.Tables[1].Cell(i + 3, 9).Range.Text = facturas[i].Estado;
+                            wordDoc.Tables[1].Cell(i + 3, 9).Range.Text = facturas[i].Estado + " - " + (facturas[i].Situacion == "P" ? "Pagada" : (facturas[i].Situacion == "E" ? "Por Cobrar" : facturas[i].Situacion));
                         }
 
                         // Totales
