@@ -1663,9 +1663,9 @@ namespace LightSwitchApplication
                 Factura facturaFinal = facturas.LastOrDefault();
                 registroCaja.CantidadFacturas = facturas.Count;
                 registroCaja.FacturasAnuladas = facturas.Where(f => f.Estado == "A").Count();
-                registroCaja.FacturaInicialNro = facturaInicial != null ? facturaInicial.Nro : string.Empty;
+                registroCaja.FacturaInicialNro = facturaInicial != null ? facturaInicial.Dosificacion.NroAutorizacion + " - " + facturaInicial.Nro : string.Empty;
                 registroCaja.FacturaInicialFecha = facturaInicial != null ? facturaInicial.FechaEmision : new DateTime(1900, 1, 1);
-                registroCaja.FacturaFinalNro = facturaFinal != null ? facturaFinal.Nro : string.Empty;
+                registroCaja.FacturaFinalNro = facturaFinal != null ? facturaFinal.Dosificacion.NroAutorizacion + " - " + facturaFinal.Nro : string.Empty;
                 registroCaja.FacturaFinalFecha = facturaFinal != null ? facturaFinal.FechaEmision : new DateTime(1900, 1, 1);
                 registroCaja.TotalFacturadoBS = facturas.Where(f => f.Estado == "V").Sum(f => f.Monto);
 

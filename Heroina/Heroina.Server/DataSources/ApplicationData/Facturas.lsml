@@ -214,7 +214,7 @@
           <MaxLength
             Value="255" />
           <SupportedValue
-            DisplayName="EMITIDA"
+            DisplayName="POR COBRAR"
             Value="E" />
           <SupportedValue
             DisplayName="PAGADA"

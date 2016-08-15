@@ -239,7 +239,7 @@ namespace LightSwitchApplication
             if (Facturas.SelectedItem == null)
                 return;
 
-            groupFacturaDetalle.DisplayName = "Factura Nro. " + Facturas.SelectedItem.Nro;
+            groupFacturaDetalle.DisplayName = "Factura Nro. " + Facturas.SelectedItem.Dosificacion.NroAutorizacion + " - " + Facturas.SelectedItem.Nro;
         }
 
         partial void ImprimirFacturas_Execute()

@@ -2185,6 +2185,33 @@
                     </ContentItem>
                   </ContentItem>
                   <ContentItem
+                    Name="Dosificacion"
+                    Kind="Details"
+                    DataType="Dosificacion">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Nro Autorización" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Factura/Properties[Dosificacion]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Dosificacion1"
+                      Kind="Details"
+                      DataType="Dosificacion">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                  </ContentItem>
+                  <ContentItem
                     Name="Nro"
                     Kind="Value"
                     DataType=":String">
@@ -2287,6 +2314,23 @@
                         <ChainExpression>
                           <MemberExpression
                             Member="Factura/Properties[Estado]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Situacion"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Situación" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Factura/Properties[Situacion]" />
                         </ChainExpression>
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>

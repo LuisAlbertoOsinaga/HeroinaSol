@@ -167,9 +167,9 @@ namespace LightSwitchApplication
                     wordDoc.Bookmarks("TotalVentas").Range.InsertAfter(RegistroCaja.TotalFacturadoBS.ToString("###,###,###.00"));
                     wordDoc.Bookmarks("FacturasEmitidas").Range.InsertAfter(RegistroCaja.CantidadFacturas.ToString());
                     wordDoc.Bookmarks("FacturasAnuladas").Range.InsertAfter(RegistroCaja.FacturasAnuladas.ToString());
-                    wordDoc.Bookmarks("PrimeraFactura").Range.InsertAfter(string.Format("{0} ({1})", RegistroCaja.FacturaInicialNro, 
+                    wordDoc.Bookmarks("PrimeraFactura").Range.InsertAfter(string.Format("{0} \n({1})", RegistroCaja.FacturaInicialNro, 
                                                                                                     RegistroCaja.FacturaInicialFecha.ToString("dd-MM-yyyy hh:mm:ss")));
-                    wordDoc.Bookmarks("UltimaFactura").Range.InsertAfter(string.Format("{0} ({1})", RegistroCaja.FacturaFinalNro,
+                    wordDoc.Bookmarks("UltimaFactura").Range.InsertAfter(string.Format("{0} \n({1})", RegistroCaja.FacturaFinalNro,
                                                                                                     RegistroCaja.FacturaFinalFecha.ToString("dd-MM-yyyy hh:mm:ss")));
                     wordDoc.Bookmarks("RecaudacionContado").Range.InsertAfter(RegistroCaja.FacturadoContadoBS.ToString("###,###,###.00"));
                     wordDoc.Bookmarks("RecaudacionCobranzas").Range.InsertAfter(RegistroCaja.TotalCobranzasBS.ToString("###,###,###.00"));

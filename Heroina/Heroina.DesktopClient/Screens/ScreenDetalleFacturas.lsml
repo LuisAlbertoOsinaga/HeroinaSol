@@ -617,6 +617,19 @@
                       </ContentItem.DataSource>
                     </ContentItem>
                   </ContentItem>
+                  <ContentItem
+                    Name="Situacion"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Factura/Properties[Situacion]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                   <ContentItem.PropertySources>
                     <ControlPropertySource
                       Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[BrowseOnly]">
