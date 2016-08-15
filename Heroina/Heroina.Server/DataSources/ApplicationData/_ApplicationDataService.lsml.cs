@@ -499,6 +499,7 @@ namespace LightSwitchApplication
                 ClienteOperacion cliOp = DataWorkspace.ApplicationData.ClienteOperacions.AddNew();
                 cliOp.Cliente = cliXCobrar;
                 cliOp.Referencia = entity.Nro;
+                cliOp.NroAutorizacion = entity.Dosificacion.NroAutorizacion;
                 cliOp.FacturaNro = entity.Nro;
                 cliOp.Fecha = entity.FechaEmision;
                 cliOp.MedioPagoBS = "EF";
@@ -521,11 +522,13 @@ namespace LightSwitchApplication
                                             where c.Id.ToString() == op
                                             select c).FirstOrDefault();
                     cop.Estado = "C";
+                    cop.NroAutorizacion = entity.Dosificacion.NroAutorizacion;
                     cop.FacturaNro = entity.Nro;
 
                     ClienteOperacion cliOp = DataWorkspace.ApplicationData.ClienteOperacions.AddNew();
                     cliOp.Cliente = cop.Cliente;
                     cliOp.Referencia = cop.Referencia;
+                    cliOp.NroAutorizacion = cop.NroAutorizacion;
                     cliOp.FacturaNro = cop.FacturaNro;
                     cliOp.Fecha = entity.FechaEmision;
                     cliOp.MedioPagoBS = cop.MedioPagoBS;
@@ -564,7 +567,8 @@ namespace LightSwitchApplication
                                   select cli).FirstOrDefault();
 
                 ClienteOperacion cliOp = (from ClienteOperacion co in DataWorkspace.ApplicationData.ClienteOperacions
-                                              where co.Cliente.Id == cliXCobrar.Id && co.FacturaNro == entity.Nro
+                                              where co.Cliente.Id == cliXCobrar.Id && 
+                                              co.NroAutorizacion == entity.Dosificacion.NroAutorizacion && co.FacturaNro == entity.Nro
                                               select co).FirstOrDefault();
                 cliOp.Estado = "C";
             }
@@ -577,7 +581,8 @@ namespace LightSwitchApplication
                                   select cli).FirstOrDefault();
 
                 ClienteOperacion cliOp = (from ClienteOperacion co in DataWorkspace.ApplicationData.ClienteOperacions
-                                          where co.Cliente.Id == cliXCobrar.Id && co.FacturaNro == entity.Nro
+                                          where co.Cliente.Id == cliXCobrar.Id &&
+                                          co.NroAutorizacion == entity.Dosificacion.NroAutorizacion && co.FacturaNro == entity.Nro
                                           select co).FirstOrDefault();
                 if (cliOp != null)
                 {
@@ -590,6 +595,7 @@ namespace LightSwitchApplication
                     cliOp = DataWorkspace.ApplicationData.ClienteOperacions.AddNew();
                     cliOp.Cliente = cliXCobrar;
                     cliOp.Referencia = entity.Nro;
+                    cliOp.NroAutorizacion = entity.Dosificacion.NroAutorizacion;
                     cliOp.FacturaNro = entity.Nro;
                     cliOp.Fecha = entity.FechaEmision;
                     cliOp.MedioPagoBS = "EF";
@@ -636,11 +642,13 @@ namespace LightSwitchApplication
                                             where c.Id.ToString() == op
                                             select c).FirstOrDefault();
                     cop.Estado = "C";
+                    cop.NroAutorizacion = entity.Dosificacion.NroAutorizacion;
                     cop.FacturaNro = entity.Nro;
 
                     ClienteOperacion cliOp = DataWorkspace.ApplicationData.ClienteOperacions.AddNew();
                     cliOp.Cliente = cop.Cliente;
                     cliOp.Referencia = cop.Referencia;
+                    cliOp.NroAutorizacion = cop.NroAutorizacion;
                     cliOp.FacturaNro = cop.FacturaNro;
                     cliOp.Fecha = entity.FechaEmision;
                     cliOp.MedioPagoBS = cop.MedioPagoBS;
