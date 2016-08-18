@@ -11,7 +11,6 @@ using Microsoft.LightSwitch.Presentation.Extensions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-
 namespace LightSwitchApplication
 {
     public partial class ScreenFacturaCobro

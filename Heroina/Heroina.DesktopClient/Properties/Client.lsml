@@ -366,6 +366,9 @@
     <ApplicationCommand
       Name="ScreenCommandShowScreenFacturasXCobrar"
       Target="!module/Methods[ShowScreenFacturasXCobrar]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturaCobroSimple"
+      Target="!module/Methods[ShowScreenFacturaCobroSimple]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
@@ -424,6 +427,9 @@
       <ApplicationNavigationLink
         Name="link24"
         Command="!module/Commands[ScreenCommandShowScreenFacturaAnulador]" />
+      <ApplicationNavigationLink
+        Name="link9"
+        Command="!module/Commands[ScreenCommandShowScreenFacturaCobroSimple]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group2">

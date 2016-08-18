@@ -37,7 +37,8 @@ namespace LightSwitchApplication
                                                          string.Compare(f.FacturaTipo.Codigo, FacturaTipoFacturaFinal) <= 0) &&
                                                      (string.Compare(f.Estado, FacturaEstadoInicial) >= 0 &&
                                                          string.Compare(f.Estado, FacturaEstadoFinal) <= 0) &&
-                                                     (f.FechaEmision >= FacturaFechaInicial && f.FechaEmision <= FacturaFechaFinal)
+                                                     (f.FechaEmision >= FacturaFechaInicial && f.FechaEmision <= FacturaFechaFinal) &&
+                                                     f.Situacion == "E"
                                              select f).ToList();
 
             CantidadFacturasVig = (from Factura f in FacturasReporte

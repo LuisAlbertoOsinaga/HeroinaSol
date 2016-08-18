@@ -360,6 +360,9 @@
     <Compile Include="Screens\GridSucursales.lsml.cs">
       <DependentUpon>GridSucursales.lsml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ScreenFacturaCobroSimple.lsml.cs">
+      <DependentUpon>ScreenFacturaCobroSimple.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\ScreenFacturaDef.lsml.cs">
       <DependentUpon>ScreenFacturaDef.lsml</DependentUpon>
     </Compile>
@@ -475,6 +478,7 @@
     <LightSwitchModel Include="Screens\ScreenCerrarCaja.lsml" />
     <LightSwitchModel Include="Screens\ScreenRolMails.lsml" />
     <LightSwitchModel Include="Screens\ScreenParametros.lsml" />
+    <LightSwitchModel Include="Screens\ScreenFacturaCobroSimple.lsml" />
     <Resource Include="Resources\info_32.png" />
     <Resource Include="Resources\clipboard_32.png" />
     <Content Include="Resources\interact_32.png" />
