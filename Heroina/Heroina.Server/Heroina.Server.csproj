@@ -423,6 +423,9 @@
     <LightSwitchModel Include="DataSources\ApplicationData\FacturasXAutorizacionYNro.lsml">
       <DependentUpon>Facturas.lsml</DependentUpon>
     </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ClienteOperacionXCobrarXNroAutoYFacturaNro.lsml">
+      <DependentUpon>ClienteOperacions.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

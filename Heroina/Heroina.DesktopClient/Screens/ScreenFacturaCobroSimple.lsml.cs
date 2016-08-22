@@ -7,6 +7,7 @@ using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Framework.Client;
 using Microsoft.LightSwitch.Presentation;
 using Microsoft.LightSwitch.Presentation.Extensions;
+using System.Windows;
 namespace LightSwitchApplication
 {
     public partial class ScreenFacturaCobroSimple
@@ -16,6 +17,10 @@ namespace LightSwitchApplication
         IContentItemProxy DVFecha;
         IContentItemProxy DVFechaInicial;
         IContentItemProxy DVFechaFinal;
+
+        IContentItemProxy boxFactura;
+        IContentItemProxy btnAnularOperacion;
+        IContentItemProxy btnCobrarOperacion;
 
         #endregion
 
@@ -62,11 +67,44 @@ namespace LightSwitchApplication
             OperacionesXCobrar.Load();
         }
 
+        void CobrarOpCredito()
+        {
+
+                ClienteOperacion opXCobrar = OperacionesXCobrar.SelectedItem;
+                ClienteOperacion opPago = this.DataWorkspace.ApplicationData.ClienteOperacions.AddNew();
+
+                opXCobrar.Estado = "C";
+            
+                opPago.Cliente = opXCobrar.Cliente;
+                opPago.OperacionOrigen = opXCobrar;
+                opPago.Contabilizada = false;
+                opPago.Estado = "V";    // Vigente
+                opPago.NroAutorizacion = opXCobrar.NroAutorizacion;
+                opPago.FacturaNro = opXCobrar.FacturaNro;
+                opPago.Fecha = DateTime.Now;
+                opPago.Monto = opXCobrar.Monto;
+                opPago.MontoBS = opXCobrar.MontoBS;
+                if (Cfg.TipoCambio > 0)
+                    opPago.MontoUS = Math.Round(opXCobrar.MontoBS / Cfg.TipoCambio, 2);
+                opPago.MedioPagoBS = "DC";
+                opPago.MedioPagoUS = "DC";
+                opPago.TipoOperacion = "CC";
+
+                Factura.Estado = "P";
+
+                Save();
+                OperacionesXCobrar.Load();
+        }
+
         void FindControls()
         {
             DVFecha = this.FindControl("DVFecha");
             DVFechaInicial = this.FindControl("DVFechaInicial");
             DVFechaFinal = this.FindControl("DVFechaFinal");
+
+            boxFactura = this.FindControl("DetalleFactura");
+            btnAnularOperacion = this.FindControl("AnularOperacion");
+            btnCobrarOperacion = this.FindControl("CobrarOperacion");
         }
 
         void InitDataWorkspace()
@@ -146,9 +184,52 @@ namespace LightSwitchApplication
             Inits();
         }
 
+        partial void AnularOperacion_Execute()
+        {
+            MessageBoxResult result = this.ShowMessageBox(string.Format("Desea anular la Op.de Crédito {0}, asociada a la Factura {1} - {2} ?", 
+                                                                        OperacionesXCobrar.SelectedItem.Id, OperacionesXCobrar.SelectedItem.NroAutorizacion, 
+                                                                        OperacionesXCobrar.SelectedItem.FacturaNro), 
+                                                            "CONFIRMACIÓN", MessageBoxOption.YesNo);
+            if(result == MessageBoxResult.Yes)
+            {
+                OperacionesXCobrar.SelectedItem.Estado = "A";
+                Save();
+                OperacionesXCobrar.Load();
+            }
+        }
+
         partial void BuscarOperacioneXCobrar_Execute()
         {
             BuscarOperaciones();
+        }
+
+        partial void CobrarOperacion_Execute()
+        {
+            MessageBoxResult result = this.ShowMessageBox(string.Format("Desea registra cobro de la Op.de Crédito {0}, asociada a la Factura {1} - {2} ?", 
+                                                                        OperacionesXCobrar.SelectedItem.Id, OperacionesXCobrar.SelectedItem.NroAutorizacion, 
+                                                                        OperacionesXCobrar.SelectedItem.FacturaNro), 
+                                                            "CONFIRMACIÓN", MessageBoxOption.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                CobrarOpCredito();
+            }
+        }
+
+        partial void OperacionesXCobrar_Loaded(bool succeeded)
+        {
+            Mensaje = OperacionesXCobrar.Count > 0 ? string.Empty : "No hay operaciones por cobrar!";
+            if(OperacionesXCobrar.Count > 0)
+            {
+                CantidadFacturas = OperacionesXCobrar.Count;
+                Total = OperacionesXCobrar.Sum(x => x.Monto);
+            }
+        }
+
+        partial void OperacionesXCobrar_SelectionChanged()
+        {
+            boxFactura.DisplayName = string.Format("Factura Nro: {0} - {1}", Factura.Dosificacion.NroAutorizacion, Factura.Nro);
+            btnAnularOperacion.IsVisible = Factura.Estado == "A";
+            btnCobrarOperacion.IsVisible = Factura.Estado == "V";
         }
 
         partial void RangoFechas_Changed()

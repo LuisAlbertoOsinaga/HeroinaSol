@@ -501,37 +501,6 @@ namespace LightSwitchApplication
                 {
                     Factura.Estado = "V";
                     Save();
-
-                    //// Parametros Mails
-                    //List<Parametro> pars;
-                    //pars = (from Parametro p in DataWorkspace.ApplicationData.Parametros
-                    //        where p.Empresa.Id == Empresa.Id && p.Categoria == "SMTP_ENABLED"
-                    //        select p).ToList();
-                    //Parametro parEnabled = pars.FirstOrDefault(p => p.Clave == "ENABLED");
-                    //bool smtpEnabled = parEnabled != null && parEnabled.Valor == "S";
-                    //Parametro parCajaEnabled = pars.FirstOrDefault(p => p.Clave == "CAJA_ENABLED");
-                    //bool smtpCajaEnabled = parCajaEnabled != null && parCajaEnabled.Valor == "S";
-                    //Parametro parAnulacionEnabled = pars.FirstOrDefault(p => p.Clave == "ANULACION_ENABLED");
-                    //bool smtpAnulacionEnabled = parAnulacionEnabled != null && parAnulacionEnabled.Valor == "S";
-
-                    //// Send Email
-                    //if (smtpEnabled && smtpCajaEnabled && smtpAnulacionEnabled)
-                    //{
-                    //    string body = "FACTURA DESANULADA";
-
-                    //    if (Factura != null)
-                    //    {
-                    //        body += string.Format("\n\nFactura Nro: {0}\nNIT Cliente: {1}\nNombre Cliente: {2}\nMonto (Bs): {3}\nUsuario: {4}",
-                    //                                         Factura.Nro,
-                    //                                         Factura.ClienteNIT,
-                    //                                         Factura.ClienteNombre,
-                    //                                         Factura.Monto.ToString("###,###,###.00"),
-                    //                                         Factura.CreadoPor);
-                    //    }
-
-                    //    Utilidades.SendMails("info@CashFlow.com", "SUPERVISOR", "CASHFOW - DESANULACION DE FACTURA", body, DateTime.Now,
-                    //                            Empresa, DataWorkspace.ApplicationData);
-                    //}
                 }
             }
         }
@@ -608,6 +577,12 @@ namespace LightSwitchApplication
 
             this.CloseModalWindow("ModalAnulacion");
             Factura.Estado = "A";
+
+            ClienteOperacion cuentaXCobrar = this.DataWorkspace.ApplicationData.ClienteOperacionXCobrarXNroAutoYFacturaNro(Factura.Dosificacion.NroAutorizacion,
+                                                                                                                            Factura.Nro);
+            if (cuentaXCobrar != null)
+                cuentaXCobrar.Estado = "A";
+
             Save();
 
             // Parametros Mails
