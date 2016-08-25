@@ -22,7 +22,7 @@
     <ApplicationServerType>IIS</ApplicationServerType>
     <AuthenticationType>Forms</AuthenticationType>
     <ApplicationName>CashFlow</ApplicationName>
-    <AssemblyVersion>1.6.118.0</AssemblyVersion>
+    <AssemblyVersion>1.6.119.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
