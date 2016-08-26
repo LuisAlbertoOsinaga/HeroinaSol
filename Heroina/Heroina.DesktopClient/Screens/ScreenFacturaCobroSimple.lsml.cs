@@ -81,7 +81,7 @@ namespace LightSwitchApplication
                 opPago.Estado = "V";    // Vigente
                 opPago.NroAutorizacion = opXCobrar.NroAutorizacion;
                 opPago.FacturaNro = opXCobrar.FacturaNro;
-                opPago.Fecha = DateTime.Now;
+                opPago.Fecha = FechaCobro;
                 opPago.Monto = opXCobrar.Monto;
                 opPago.MontoBS = opXCobrar.MontoBS;
                 if (Cfg.TipoCambio > 0)
@@ -203,16 +203,28 @@ namespace LightSwitchApplication
             BuscarOperaciones();
         }
 
+        partial void CancelarCredito_Execute()
+        {
+            this.CloseModalWindow("CobraOperacionCredito");
+        }
+
         partial void CobrarOperacion_Execute()
         {
-            MessageBoxResult result = this.ShowMessageBox(string.Format("Desea registra cobro de la Op.de Crédito {0}, asociada a la Factura {1} - {2} ?", 
-                                                                        OperacionesXCobrar.SelectedItem.Id, OperacionesXCobrar.SelectedItem.NroAutorizacion, 
-                                                                        OperacionesXCobrar.SelectedItem.FacturaNro), 
-                                                            "CONFIRMACIÓN", MessageBoxOption.YesNo);
-            if (result == MessageBoxResult.Yes)
+            this.OpenModalWindow("CobraOperacionCredito");
+        }
+
+        partial void CobrarCredito_Execute()
+        {
+            DateTime fechaTemp = OperacionesXCobrar.SelectedItem.Fecha;
+            DateTime fecha = new DateTime(fechaTemp.Year, fechaTemp.Month, fechaTemp.Day);
+            
+            if(FechaCobro < fecha)
             {
-                CobrarOpCredito();
+                this.ShowMessageBox("Fecha de cobro no puede ser anterior a fecha de la operación!", "ERROR", MessageBoxOption.Ok);
+                return;
             }
+            CobrarOpCredito();
+            this.CloseModalWindow("CobraOperacionCredito");
         }
 
         partial void OperacionesXCobrar_Loaded(bool succeeded)

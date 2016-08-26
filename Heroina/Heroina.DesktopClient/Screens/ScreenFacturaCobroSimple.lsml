@@ -468,6 +468,10 @@
                     Name="Monto"
                     Kind="Value"
                     DataType="Microsoft.LightSwitch.Extensions:Money">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Monto (BS)" />
+                    </ContentItem.Attributes>
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -780,6 +784,205 @@
               </ContentItem>
             </ContentItem>
           </ContentItem>
+          <ContentItem
+            Name="CobraOperacionCredito"
+            Kind="Group"
+            View="Microsoft.LightSwitch.RichClient:ModalWindow">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Cobra Operación Credito" />
+            </ContentItem.Attributes>
+            <ContentItem
+              Name="OperacionesXCobrar_SelectedItem_Fecha"
+              Kind="Value"
+              DataType=":DateTime"
+              View="Microsoft.LightSwitch.RichClient:DateTimeViewer">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ScreenFacturaCobroSimple/Properties[OperacionesXCobrar]" />
+                    <MemberExpression
+                      Member="SelectedItem" />
+                    <MemberExpression
+                      Member="Fecha" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.RichClient:DateTimeViewerBase/Properties[ShowTime]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="False"
+                        ResultType=":Boolean" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="OperacionesXCobrar_SelectedItem_Id"
+              Kind="Value"
+              DataType=":Int32">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Nro Crédito" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ScreenFacturaCobroSimple/Properties[OperacionesXCobrar]" />
+                    <MemberExpression
+                      Member="SelectedItem" />
+                    <MemberExpression
+                      Member="Id" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="OperacionesXCobrar_SelectedItem_NroAutorizacion"
+              Kind="Value"
+              DataType=":String?"
+              View="Microsoft.LightSwitch.RichClient:Label">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Nro Autorización" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ScreenFacturaCobroSimple/Properties[OperacionesXCobrar]" />
+                    <MemberExpression
+                      Member="SelectedItem" />
+                    <MemberExpression
+                      Member="NroAutorizacion" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="OperacionesXCobrar_SelectedItem_FacturaNro"
+              Kind="Value"
+              DataType=":String?"
+              View="Microsoft.LightSwitch.RichClient:Label">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ScreenFacturaCobroSimple/Properties[OperacionesXCobrar]" />
+                    <MemberExpression
+                      Member="SelectedItem" />
+                    <MemberExpression
+                      Member="FacturaNro" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="OperacionesXCobrar_SelectedItem_Monto"
+              Kind="Value"
+              DataType="Microsoft.LightSwitch.Extensions:Money"
+              View="Microsoft.LightSwitch.Extensions:MoneyViewerControl">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Monto (BS)" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ScreenFacturaCobroSimple/Properties[OperacionesXCobrar]" />
+                    <MemberExpression
+                      Member="SelectedItem" />
+                    <MemberExpression
+                      Member="Monto" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="OperacionesXCobrar_SelectedItem_Cliente"
+              Kind="Details"
+              DataType="Cliente"
+              View="Microsoft.LightSwitch.RichClient:Summary">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ScreenFacturaCobroSimple/Properties[OperacionesXCobrar]" />
+                    <MemberExpression
+                      Member="SelectedItem" />
+                    <MemberExpression
+                      Member="Cliente" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="FechaCobro"
+              Kind="Value"
+              DataType=":Date">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ScreenFacturaCobroSimple/Properties[FechaCobro]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="CobrarCredito"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Cobrar" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="ScreenFacturaCobroSimple/Methods[CobrarCredito]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="CancelarCredito"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Cancelar" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="ScreenFacturaCobroSimple/Methods[CancelarCredito]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem.CommandItems>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:ModalWindow/Properties[ShowButton]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="False"
+                      ResultType=":Boolean" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
           <ContentItem.PropertySources>
             <ControlPropertySource
               Property="Microsoft.LightSwitch.RichClient:ScrollableControl/Properties[IsVerticalScrollBarEnabled]">
@@ -856,6 +1059,10 @@
         Name="AnularOperacion" />
       <ScreenMethod
         Name="CobrarOperacion" />
+      <ScreenMethod
+        Name="CobrarCredito" />
+      <ScreenMethod
+        Name="CancelarCredito" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
@@ -1065,6 +1272,13 @@
           <Required />
           <StringValueFormat
             Value="#,###.00" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="FechaCobro"
+        PropertyType=":Date">
+        <ScreenProperty.Attributes>
+          <Required />
         </ScreenProperty.Attributes>
       </ScreenProperty>
     </Screen.Properties>
