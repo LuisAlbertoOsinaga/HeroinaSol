@@ -90,7 +90,7 @@ namespace LightSwitchApplication
                 opPago.MedioPagoUS = "DC";
                 opPago.TipoOperacion = "CC";
 
-                Factura.Estado = "P";
+                Factura.Situacion = "P";
 
                 Save();
                 OperacionesXCobrar.Load();
@@ -239,9 +239,19 @@ namespace LightSwitchApplication
 
         partial void OperacionesXCobrar_SelectionChanged()
         {
-            boxFactura.DisplayName = string.Format("Factura Nro: {0} - {1}", Factura.Dosificacion.NroAutorizacion, Factura.Nro);
-            btnAnularOperacion.IsVisible = Factura.Estado == "A";
-            btnCobrarOperacion.IsVisible = Factura.Estado == "V";
+            if (OperacionesXCobrar.SelectedItem != null)
+            {
+                boxFactura.DisplayName = string.Format("Factura Nro: {0} - {1}", Factura.Dosificacion.NroAutorizacion, Factura.Nro);
+                btnAnularOperacion.IsVisible = Factura.Estado == "A";
+                btnCobrarOperacion.IsVisible = Factura.Estado == "V";
+            }
+            else
+            {
+                boxFactura.DisplayName = string.Empty;
+                btnAnularOperacion.IsVisible = false;
+                btnCobrarOperacion.IsVisible = false;
+
+            }
         }
 
         partial void RangoFechas_Changed()

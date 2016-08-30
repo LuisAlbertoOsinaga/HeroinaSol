@@ -369,6 +369,9 @@
     <ApplicationCommand
       Name="ScreenCommandShowScreenFacturaCobroSimple"
       Target="!module/Methods[ShowScreenFacturaCobroSimple]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowScreenFacturasCobradas"
+      Target="!module/Methods[ShowScreenFacturasCobradas]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
@@ -452,6 +455,9 @@
       <ApplicationNavigationLink
         Name="link8"
         Command="!module/Commands[ScreenCommandShowScreenFacturasXCobrar]" />
+      <ApplicationNavigationLink
+        Name="link15"
+        Command="!module/Commands[ScreenCommandShowScreenFacturasCobradas]" />
       <ApplicationNavigationLink
         Name="link14"
         Command="!module/Commands[ScreenCommandShowScreenClientesOperaciones]" />

@@ -553,6 +553,18 @@
                     </ContentItem.DataSource>
                   </ContentItem>
                 </ContentItem.CommandItems>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:DataGrid/Properties[ShowVirtualRow]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="False"
+                          ResultType=":Boolean" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem.PropertySources>
                 <ControlPropertySource
@@ -1194,16 +1206,16 @@
         PropertyType=":String?">
         <ScreenProperty.Attributes>
           <SupportedValue
-            DisplayName="DÍA"
+            DisplayName="DEL DÍA"
             Value="D" />
           <SupportedValue
-            DisplayName="SEMANA"
+            DisplayName="DE LA SEMANA"
             Value="S" />
           <SupportedValue
-            DisplayName="MES"
+            DisplayName="DEL MES"
             Value="M" />
           <SupportedValue
-            DisplayName="AÑO"
+            DisplayName="DEL AÑO"
             Value="A" />
           <SupportedValue
             DisplayName="ENTRE FECHAS"

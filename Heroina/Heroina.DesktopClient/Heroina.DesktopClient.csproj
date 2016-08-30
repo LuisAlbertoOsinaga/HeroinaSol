@@ -366,6 +366,9 @@
     <Compile Include="Screens\ScreenFacturaDef.lsml.cs">
       <DependentUpon>ScreenFacturaDef.lsml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ScreenFacturasCobradas.lsml.cs">
+      <DependentUpon>ScreenFacturasCobradas.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\ScreenFacturasXCobrar.lsml.cs">
       <DependentUpon>ScreenFacturasXCobrar.lsml</DependentUpon>
     </Compile>
@@ -479,6 +482,7 @@
     <LightSwitchModel Include="Screens\ScreenRolMails.lsml" />
     <LightSwitchModel Include="Screens\ScreenParametros.lsml" />
     <LightSwitchModel Include="Screens\ScreenFacturaCobroSimple.lsml" />
+    <LightSwitchModel Include="Screens\ScreenFacturasCobradas.lsml" />
     <Resource Include="Resources\info_32.png" />
     <Resource Include="Resources\clipboard_32.png" />
     <Content Include="Resources\interact_32.png" />
