@@ -379,5 +379,32 @@ namespace LightSwitchApplication
             result = Application.Current.User.HasPermission(Permissions.ManageDefiniciones);
             #endif
         }
+
+        partial void ScreenFacturaCobroSimple_CanRun(ref bool result)
+        {
+            #if DEBUG
+            result = Application.Current.User.Name == "TestUser";
+            #else
+            result = Application.Current.User.HasPermission(Permissions.ManageReportes);
+            #endif
+        }
+
+        partial void ScreenFacturasXCobrar_CanRun(ref bool result)
+        {
+            #if DEBUG
+            result = Application.Current.User.Name == "TestUser";
+            #else
+            result = Application.Current.User.HasPermission(Permissions.ManageSupervision);
+            #endif
+        }
+
+        partial void ScreenFacturasCobradas_CanRun(ref bool result)
+        {
+            #if DEBUG
+            result = Application.Current.User.Name == "TestUser";
+            #else
+            result = Application.Current.User.HasPermission(Permissions.ManageSupervision);
+            #endif
+        }
     }
 }
