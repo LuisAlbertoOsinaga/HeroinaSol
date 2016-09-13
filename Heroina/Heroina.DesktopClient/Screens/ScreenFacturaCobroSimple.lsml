@@ -5,8 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ScreenFacturaCobroSimple"
-    LaunchMode="Multiple">
+    Name="ScreenFacturaCobroSimple">
     <Screen.Attributes>
       <DisplayName
         Value="Cobranza sin efectivo" />

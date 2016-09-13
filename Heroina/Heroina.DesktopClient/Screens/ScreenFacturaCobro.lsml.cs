@@ -357,6 +357,7 @@ namespace LightSwitchApplication
                 opPago.Cliente = opCobrada.Cliente;
                 opPago.Contabilizada = false;
                 opPago.Estado = "V";    // Vigente
+                opPago.NroAutorizacion = opCobrada.NroAutorizacion;
                 opPago.FacturaNro = opCobrada.FacturaNro;
                 opPago.Fecha = DateTime.Now;
                 opPago.MedioPagoBS = FormaPago.MedioPagoBS.Codigo;
