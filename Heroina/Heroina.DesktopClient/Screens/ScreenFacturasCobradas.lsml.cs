@@ -158,6 +158,8 @@ namespace LightSwitchApplication
 
         partial void OperacionesCobradas_Loaded(bool succeeded)
         {
+            CantidadFacturas = 0;
+            Total = 0M;
             Mensaje = OperacionesCobradas.Count > 0 ? string.Empty : "No hay operaciones cobradas en este período!";
             if (OperacionesCobradas.Count > 0)
             {
